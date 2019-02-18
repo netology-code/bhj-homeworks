@@ -1,0 +1,50 @@
+.dropdown {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font-family: Helvetica;
+  font-weight: 300;
+}
+
+.dropdown__value {
+  color: #fff;
+  background: gray;
+  box-sizing: border-box;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.dropdown__value:after {
+  content: '\21E9';
+  margin-left: 5px;
+}
+
+.dropdown__list {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  border: 1px solid gray;
+  border-bottom: none;
+  border-radius: 4px;
+}
+
+.dropdown__link {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid gray;
+  border-radius: 4px;
+}
+
+.dropdown__list_active {
+  display: block;
+}
