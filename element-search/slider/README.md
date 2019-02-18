@@ -51,15 +51,15 @@
 
 ![Extended Demo](./extended-demo.gif)
 
-Вся HTML/CSS разметка уже присутствует в файлах:
+Вся HTML/CSS разметка уже присутствует в файлах (её необходимо расскомментировать):
 
 ```html
 <div class="slider__dots">
-  <div class="slider_dot"></div>
-  <div class="slider_dot"></div>
-  <div class="slider_dot"></div>
-  <div class="slider_dot"></div>
-  <div class="slider_dot"></div>
+  <div class="slider__dot"></div>
+  <div class="slider__dot"></div>
+  <div class="slider__dot"></div>
+  <div class="slider__dot"></div>
+  <div class="slider__dot"></div>
 </div>
 ```
 

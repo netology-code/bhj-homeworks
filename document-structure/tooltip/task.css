@@ -1,0 +1,21 @@
+.has-tooltip {
+  color: #000;
+  background: yellow;
+}
+
+.has-tooltip:hover {
+  color: red;
+}
+
+.tooltip {
+  position: fixed;
+  display: none;
+  background: black;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.tooltip_active {
+  display: block;
+}

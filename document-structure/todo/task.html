@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Список задач</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <div class="tasks" id="tasks">
+        <form class="tasks__control" const="tasks__form">
+            <input type="text" class="tasks__input" id="task__input" placeholder="Введите название новой задачи">
+            <button class="tasks__add" id="tasks__add">Добавить</button>
+        </form>
+        <div class="tasks__list" id="tasks__list">
+            <!-- стандартный шаблон задачи -->
+            <!-- <div class="task">
+              <div class="task__title">
+                Сходить в магазин
+              </div>
+              <a href="#" class="task__remove">&times;</a>
+            </div> -->
+        </div>
+    </div>
+    <script src="task.js"></script>
+</body>
+</html>
