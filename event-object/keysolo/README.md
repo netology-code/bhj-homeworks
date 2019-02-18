@@ -47,11 +47,11 @@
 2. [Свойства узлов: тип, тег и содержимое](https://learn.javascript.ru/basic-dom-node-properties)
 
 ## Решение задач
-1. Перейти в папку задания. `cd ./event-object/dropdown`.
+1. Перейти в папку задания. `cd ./event-object/keysolo`.
 2. Открыть файл `task.js` в вашем редакторе кода и выполнить задание.
 3. Открыть файл `task.html` в вашем браузере и убедиться в правильности выводимых результатов.
 4. Добавить файл `task.js` в индекс git с помощью команды `git add %file-path%`, где %file-path% - путь до целевого файла. `git add task.js`.
-5. Сделать коммит используя команду `git commit -m '%comment%'`, где %comment% - это произвольный комментарий к вашему коммиту. `git commit -m 'first commit dropdown'`.
+5. Сделать коммит используя команду `git commit -m '%comment%'`, где %comment% - это произвольный комментарий к вашему коммиту. `git commit -m 'first commit keysolo'`.
 6. Опубликовать код в репозиторий homeworks с помощью команды `git push -u homeworks master`.
 7. Прислать ссылку на репозиторий через личный кабинет на сайте [Нетологии][6].
 
