@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Autocomplete</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <p>
+        Справочник крокодила Гены <b>Ч</b>:
+    </p>
+    <div class="autocomplete">
+        <div class="autocomplete__helper">
+            <div class="autocomplete__value">
+                <div class="autocomplete__text-content">Чебурашка</div>
+                <input type="text" name="" class="autocomplete__search" placeholder="Поиск">
+            </div>
+            <ul class="autocomplete__list"></ul>
+        </div>
+        <select class="autocomplete__input">
+            <option value="1">Чебурашка</option>
+            <option value="2">Чебоксары</option>
+            <option value="3">Чемодан</option>
+            <option value="4">Чебурек</option>
+        </select>
+    </div>
+    <script src="task.js"></script>
+</body>
+</html>

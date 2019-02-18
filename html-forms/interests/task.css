@@ -1,0 +1,11 @@
+.interests {
+  display: none;
+}
+
+.interests_main {
+  display: block;
+}
+
+.interests_active {
+  display: block;
+}
