@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+}
+
+.book_fs-big {
+  font-size: 20px;
+}
+
+.book_fs-small {
+  font-size: 12px;
+}
+
+.book_color-gray {
+  color: gray;
+}
+
+.book_color-whitesmoke {
+  color: whitesmoke;
+}
+
+.book_bg-gray {
+  color: whitesmoke;
+}
+
+.book_bg-white {
+  color: white;
+}
+
+.book__controls {
+  background: rgb(63, 63, 63);
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: whitesmoke;
+  font-size: 16px;;
+}
+
+.book__control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 4px;
+  margin-left: 5px;
+  box-sizing: border-box;
+}
+
+.color_black {
+  background: #000;
+}
+
+.color_gray {
+  background: grey;
+}
+
+.color_whitesmoke {
+  background: whitesmoke;
+}
+
+.color_white {
+  background: white;
+}
+
+.color_active {
+  box-shadow: 0 0 5px white;
+  border: 1px solid gray;
+}
+
+.font-size {
+  text-align: center;
+  text-decoration: none;
+  color: whitesmoke;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding: 2px 6px;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 1px 6px;
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.font-size_small {
+  font-size: 12px;
+}
+
+.font-size_big {
+  font-size: 20px;
+}
+
+.font-size_active {
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
+}
+.book {
+  font-family: Georgia;
+}
+
+
+
+.book__content {
+  box-sizing: border-box;
+  padding: 20px;
+}
+.book p:first-letter {
+  font-size: 28px;
+}
