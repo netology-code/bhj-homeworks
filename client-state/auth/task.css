@@ -1,0 +1,37 @@
+body {
+  font-family: 'Arial';
+}
+
+.signin {
+  display: none;
+}
+.signin_active {
+  display: block;
+}
+.control {
+  padding: 20px;
+  border-radius: 25px;
+  border: 1px solid gray;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+.btn {
+  background: green;
+  color: white;
+  padding: 20px;
+  border-radius: 25px;
+  border: none;
+  display: block;
+  width: 200px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.welcome {
+  display: none;
+}
+
+.welcome_active {
+  display: block;
+}
