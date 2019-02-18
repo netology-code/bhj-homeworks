@@ -72,7 +72,20 @@ __Условия победы и поражения__
 лунок располагают для такого подхода
 2. Используйте цикл для задания обработчика для каждой лунки.
 3. Для проверки на наличие того или иного класса, используйте метод
-[includes](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
+[includes](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/includes):
+
+```javascript
+hole.className.includes( 'hole_has-mole' );
+```
+
+Более удобный вариант - использовать объект 
+[*classList*](https://developer.mozilla.org/ru/docs/Web/API/Element/classList), 
+с которым вы познакомитесь позднее. Он содержит удобный метод *contains*:
+
+```javascript
+hole.classList.contains( 'hole_has-mole' );
+```
+
 
 </details>
 
