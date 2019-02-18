@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+  font-weight: 300;
+}
+.menu {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  background: gray;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: #000;
+}
+
+.menu__link:hover {
+  color: whitesmoke;
+}
+
+.menu__item {
+  position: relative;
+}
+
+.menu_sub {
+  display: none;
+  position: absolute;
+  padding: 10px 10px 0 10px;
+}
+
+.menu_sub .menu__item {
+  margin-bottom: 10px;
+}
+
+.menu_active {
+  display: block;
+  left: -10px;
+  top: 100%;
+  min-width: 100%;
+}
