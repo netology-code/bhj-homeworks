@@ -28,6 +28,17 @@
 
 ![Extended Demo](./extended-demo.gif)
 
+## Подсказки (спойлеры)
+
+<details>
+<summary>Используемые темы</summary>
+
+1. Функция *alert*
+2. Функция *setTimeout/setInterval*
+3. Свойство *textContent*
+
+</details>
+
 ## Решение задач
 1. Перейти в папку задания. `cd ./js-features/countdown`.
 2. Открыть файл `task.js` в вашем редакторе кода и выполнить задание.
