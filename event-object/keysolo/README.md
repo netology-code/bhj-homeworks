@@ -73,10 +73,9 @@
  
    
 </details>
-</summary>
-<details>
 
 <details>
+
 <summary>Советы</summary>
 
 1. Для того, чтобы получить из клавиатурного кода символ, используйте
@@ -87,8 +86,6 @@
 регистрам.
    
 </details>
-</summary>
-<details>
 
 ## Решение задач
 1. Перейти в папку задания. `cd ./event-object/keysolo`.

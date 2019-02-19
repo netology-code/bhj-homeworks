@@ -45,6 +45,24 @@
 В экземпляре класса *Autocomplete* имеется свойство *input*, которое указывет
 на тег *select*. Его необходимо использовать для обхода по всем опциям списка.
 
+## Подсказки (спойлеры)
+
+<details>
+<summary>Используемые темы</summary>
+
+1. Свойство *options* тега *select*
+2. Метод [*includes*](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
+
+</details>
+
+<details>
+<summary>Советы</summary>
+
+Для получения всех опций тега *select* достаточно обратиться к *this.input.options*
+
+</details>
+
+
 ### Процесс реализации
 
 1. Допишите метод *getMatches*

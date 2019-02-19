@@ -75,8 +75,6 @@
 4. Метод *closest*
    
 </details>
-</summary>
-<details>
 
 
 ## Решение задач

@@ -34,6 +34,31 @@
 
 ![Demo](./extended-demo.gif)
 
+## Подсказки (спойлеры)
+
+<details>
+<summary>Используемые темы</summary>
+
+1. Свойства *checked* и *indeterminate* 
+2. Методы *closest*, *querySelector* и *querySelectorAll*
+3. [Рекурсия (для повышенной сложности)](https://learn.javascript.ru/recursion)
+
+</details>
+</summary>
+<details>
+
+<details>
+<summary>Советы</summary>
+
+В задаче на повышенный уровень сложности довольно легко из-за рекурсии 
+переполнить стек вызовов. Внимательно следите за тем, чтобы проверки на наличие
+галочек вверх по дереву не шли обратно вниз.
+
+</details>
+</summary>
+<details>
+### Процесс реализации
+
 ## Решение задач
 1. Перейти в папку задания. `cd ./html-forms/interests`.
 2. Открыть файл `task.js` в вашем редакторе кода и выполнить задание.

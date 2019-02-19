@@ -105,6 +105,31 @@
 1. [Window.localStorage](https://developer.mozilla.org/ru/docs/Web/API/Window/localStorage)
 2. [LocalStorage на пальцах](https://tproger.ru/articles/localstorage/)
 
+## Подсказки (спойлеры)
+
+<details>
+<summary>Используемые темы</summary>
+
+1. Метод *getBoundingClientRect* (повышенный уровень сложности)
+2. Работа с объектом *dataset*
+
+</details>
+
+<details>
+<summary>Советы</summary>
+
+При реализации анимации, вам необходимо:
+
+1. Получить у изображения-продукта его координаты через *getBoundingClientRect*
+2. Получить у изображения в корзине его координаты через *getBoundingClientRect*
+3. Высчитать разницу между двумя изображениями по оси X и по оси Y
+4. Задать количество шагов, за которое одно изображение «настигнет другое»
+5. С помощью *setTimeout/setInterval* в течение заданного количества шагов
+постоянно уменьшать разницу между двумя картинками
+6. По окончанию анимации удалить изображение-копию 
+
+</details>
+
 ## Решение задач
 
 1. Перейти в папку задания. `cd ./document-structure/cart`.
