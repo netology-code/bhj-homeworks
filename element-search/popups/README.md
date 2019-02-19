@@ -50,6 +50,19 @@
 6. Опубликовать код в репозиторий homeworks с помощью команды `git push -u homeworks master`.
 7. Прислать ссылку на репозиторий через личный кабинет на сайте [Нетологии][6].
 
+
+## Подсказки (спойлеры)
+
+<details>
+<summary>Используемые темы</summary>
+
+1. Событие *click*, метод *onclick*, обработчик события
+2. Метод Array.from() или оператор распространения (spread, «...») для удобной
+   навигации по найденным элементам
+   
+</details>
+</summary>
+
 [0]: https://github.com/
 [1]: https://www.sublimetext.com/
 [2]: https://code.visualstudio.com/

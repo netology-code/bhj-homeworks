@@ -46,6 +46,50 @@
 1. [MDN: Element.innerHTML](https://developer.mozilla.org/ru/docs/Web/API/Element/innerHTML)
 2. [Свойства узлов: тип, тег и содержимое](https://learn.javascript.ru/basic-dom-node-properties)
 
+### Повышенный уровень сложности #3 (не обязательно)
+
+Задача для адептов JavaScript: сделайте возможным работу как с русскими, английскими, так и смешанными фразами
+(например, «я люблю kitkat»). Обратите внимание, что коды клавиш, которые
+получаются при прослушивании событий с клавиатуры, 
+одинаковые для русской и англиской раскладок.
+
+В качестве вспомогательных инструментов вам может пригодиться [таблица символов
+кодировки UTF-16](https://www.fileformat.info/info/charset/UTF-16/list.htm).
+Именно эту кодировку использует JavaScript.
+
+При необходимости, вы можете править HTML и CSS.
+
+## Подсказки (спойлеры)
+
+<details>
+<summary>Используемые темы</summary>
+
+1. Событие *click*, метод *addEventListener*, обработчик события
+2. Свойство *textContent*
+3. Метод Array.from() или оператор распространения (spread, «...») для удобной
+   навигации по найденным элементам
+4. Метод [String.fromCharCode()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode) 
+5. Метод [String.charCodeAt()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt)
+ 
+   
+</details>
+</summary>
+<details>
+
+<details>
+<summary>Советы</summary>
+
+1. Для того, чтобы получить из клавиатурного кода символ, используйте
+метод Метод [String.fromCharCode()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode) 
+2. Обратите внимание, что регистр вводимых символов может отличаться
+от того, что будет представлен на экране. Для надёжности приводите
+и символ, вводимый с клавиатуры и тот, что на экране к верхнему или нижнему
+регистрам.
+   
+</details>
+</summary>
+<details>
+
 ## Решение задач
 1. Перейти в папку задания. `cd ./event-object/keysolo`.
 2. Открыть файл `task.js` в вашем редакторе кода и выполнить задание.

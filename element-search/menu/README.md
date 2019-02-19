@@ -66,6 +66,39 @@
 
 ![Extended Demo](./extended-demo.gif)
 
+## Подсказки (спойлеры)
+
+<details>
+<summary>Используемые темы</summary>
+
+1. Событие *click*, метод *onclick*, обработчик события
+2. Предотвращение действия по умолчанию (*return false* в обработчике события)
+3. Метод *closest*
+4. Методы *querySelector* и *querySelectorAll*
+5. Метод Array.from() или оператор распространения (spread, «...») для удобной
+навигации по найденным элементам
+
+</details>
+</summary>
+
+<details>
+<summary>Советы</summary>
+
+1. С помощью методов [*closest*](https://developer.mozilla.org/ru/docs/Web/API/Element/closest), 
+[*querySelector*](https://developer.mozilla.org/ru/docs/Web/API/Element/querySelector)
+и [*querySelectorAll*](https://developer.mozilla.org/ru/docs/Web/API/Element/querySelectorAll) 
+вы можете найти все подходящие элементы
+    1. *closest* позволит найти ближайшего родителя по CSS-селектору
+    2. *querySelector* позволит найти __первый__ дочерний элемент по CSS-селектору
+    3. *querySelectorAll* позволит найти __все__ дочерние элемент по CSS-селектору
+2. Для вложенных меню вы обязаны возвращать *false* в обработчиках события для
+предотвращения перехода по ссылке.
+
+</details>
+</summary>
+
+
+
 ## Решение задач
 1. Перейти в папку задания. `cd ./element-search/menu`.
 2. Открыть файл `task.js` в вашем редакторе кода и выполнить задание.
