@@ -28,6 +28,8 @@ __Если вы уже освоились в теме объекта событ�
 2. [addEventListener](https://developer.mozilla.org/ru/docs/Web/API/EventTarget/addEventListener)
 3. [Всплытие и перехват](https://learn.javascript.ru/event-bubbling)
 4. [Делегирование событий](https://learn.javascript.ru/event-delegation)
+5. [Event.currentTarget](https://developer.mozilla.org/ru/docs/Web/API/Event/currentTarget)
+6. [Event.target](https://developer.mozilla.org/ru/docs/Web/API/Event/target)
 
 Делегирование событий - очень удобная техника для элементов, которые могут
 встретиться на странице более одного раза и имеют одинаковый функционал.
