@@ -1,0 +1,14 @@
+.reveal {
+  opacity: 0;
+  transition: 0.3s opacity ease-in-out;
+  background: orange;
+  padding: 20px;
+  min-height: 200px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 24px;
+}
+
+.reveal_active {
+  opacity: 1;
+}
