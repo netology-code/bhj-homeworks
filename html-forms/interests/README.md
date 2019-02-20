@@ -44,8 +44,6 @@
 3. [Рекурсия (для повышенной сложности)](https://learn.javascript.ru/recursion)
 
 </details>
-</summary>
-<details>
 
 <details>
 <summary>Советы</summary>
@@ -55,8 +53,7 @@
 галочек вверх по дереву не шли обратно вниз.
 
 </details>
-</summary>
-<details>
+
 ### Процесс реализации
 
 ## Решение задач
