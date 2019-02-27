@@ -67,6 +67,25 @@
 2. [Введение в браузерные события](https://learn.javascript.ru/introduction-browser-events)
 3. [addEventListener vs onclick](https://stackoverflow.com/questions/6348494/addeventlistener-vs-onclick/6348597#6348597)
 
+### Вызов события программно 
+
+Кстати, событие *click* можно вызвать вручную! Для этого у найденного элемента имеется
+отдельный метод *click*:
+
+```html
+<button id="push-me">And then just touch me</button>
+```
+
+```javascript
+const button = document.getElementById( 'push-me' );
+
+button.onclick = () => alert( 'Till i can get my satisfaction' );
+
+button.click(); // Вызовет обработчик click
+```
+
+Подробнее смотрите: [HTMLElement.click()](https://developer.mozilla.org/ru/docs/Web/API/HTMLElement/click)
+
 ### defer или async?
 
 На лекции вы познакомились с двумя атрибутами тега *script* - *defer* и *asymc*.
