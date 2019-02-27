@@ -59,7 +59,13 @@
 
 ### События, обработчики событий
 
-Для следующего параграфа вам потребуется больше
+Для следующего параграфа вам потребуется больше навыков в задании обработчиков 
+событий. Таких способа существует 3. Совсем скоро, через одну лекцию, вы узнаете
+об этих особенностях. Но для особо нетерпеливых, почитайте данные статьи:
+
+1. [Введение в события DOM](https://frontender.info/an-introduction-to-dom-events/)
+2. [Введение в браузерные события](https://learn.javascript.ru/introduction-browser-events)
+3. [addEventListener vs onclick](https://stackoverflow.com/questions/6348494/addeventlistener-vs-onclick/6348597#6348597)
 
 ### defer или async?
 
