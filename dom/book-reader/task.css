@@ -2,12 +2,28 @@ body {
   margin: 0;
 }
 
+.bg_color_black {
+  background: #000;
+}
+
+.bg_color_gray {
+  background: grey;
+}
+
+.bg_color_white {
+  background: white;
+}
+
 .book_fs-big {
   font-size: 20px;
 }
 
 .book_fs-small {
   font-size: 12px;
+}
+
+.book_color-black {
+  color: black;
 }
 
 .book_color-gray {
@@ -19,11 +35,15 @@ body {
 }
 
 .book_bg-gray {
-  background: whitesmoke;
+  background: grey;
 }
 
 .book_bg-black {
   background: black;
+}
+
+.book_bg-white {
+  background: white;
 }
 
 .book__controls {
@@ -50,22 +70,6 @@ body {
   border-radius: 4px;
   margin-left: 5px;
   box-sizing: border-box;
-}
-
-.color_black {
-  background: #000;
-}
-
-.color_gray {
-  background: grey;
-}
-
-.color_whitesmoke {
-  background: whitesmoke;
-}
-
-.color_white {
-  background: white;
 }
 
 .color_active {
@@ -102,16 +106,28 @@ body {
   border: 1px solid whitesmoke;
   border-radius: 50%;
 }
+
 .book {
   font-family: Georgia;
 }
-
-
 
 .book__content {
   box-sizing: border-box;
   padding: 20px;
 }
+
 .book p:first-letter {
   font-size: 28px;
+}
+
+.text_color_black {
+  background: #000;
+}
+
+.text_color_gray {
+  background: grey;
+}
+
+.text_color_whitesmoke {
+  background: whitesmoke;
 }

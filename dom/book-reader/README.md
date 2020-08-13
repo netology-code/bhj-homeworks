@@ -4,7 +4,7 @@
 
 ## Описание 
 
-Необходимо интерфейс онлайн-читалки электронных книг с возможностью смены размера
+Необходимо доработать интерфейс онлайн-читалки электронных книг с возможностью смены размера
 шрифта
 
 ![Demo](./demo.gif)
@@ -24,7 +24,7 @@ HTML-разметка элемента управления размером в�
 </div>
 ```
 
-HTML-размета читалки выглядит так:
+HTML-разметка читалки выглядит так:
 
 ```html
 <div class="book" id="book">
@@ -63,21 +63,16 @@ HTML-размета читалки выглядит так:
 
 ```html
 <div class="book__control book__control_color">
-    <span class="color__title">
-    Текст:
-    </span>
-    <a href="" class="color color_black color_active"></a>
-    <a href="" class="color color_gray" data-color="gray"></a>
-    <a href="" class="color color_whitesmoke" data-color="whitesmoke"></a>
+    <span class="color__title">Текст:</span>
+    <a href="" class="color text_color_black color_active" data-text-color="black"></a>
+    <a href="" class="color text_color_gray" data-text-color="gray"></a>
+    <a href="" class="color text_color_whitesmoke" data-text-color="whitesmoke"></a>
 </div>
-
 <div class="book__control book__control_background">
-    <span class="color__title">
-    Фон:
-    </span>
-    <a href="" class="color color_black" data-color="black"></a>
-    <a href="" class="color color_gray" data-color="gray"></a>
-    <a href="" class="color color_white color_active"></a>
+    <span class="color__title">Фон:</span>
+    <a href="" class="color bg_color_black" data-bg-color="black"></a>
+    <a href="" class="color bg_color_gray" data-bg-color="gray"></a>
+    <a href="" class="color bg_color_white color_active" data-bg-color="white"></a>
 </div>
 ```
 
@@ -87,11 +82,13 @@ __Цвет текста:__
 
 1. book_color-gray
 2. book_color-whitesmoke
+3. book_color-black
 
 __Фон:__
 
 1. book_bg-gray
 2. book_bg-black
+3. book_bg-white
 
 Принцип простановки классов аналогичный с основным заданием
 
