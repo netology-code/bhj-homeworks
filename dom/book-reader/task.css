@@ -2,6 +2,18 @@ body {
   margin: 0;
 }
 
+.bg_color_black {
+  background: #000;
+}
+
+.bg_color_gray {
+  background: grey;
+}
+
+.bg_color_white {
+  background: white;
+}
+
 .book_fs-big {
   font-size: 20px;
 }
@@ -52,22 +64,6 @@ body {
   box-sizing: border-box;
 }
 
-.color_black {
-  background: #000;
-}
-
-.color_gray {
-  background: grey;
-}
-
-.color_whitesmoke {
-  background: whitesmoke;
-}
-
-.color_white {
-  background: white;
-}
-
 .color_active {
   box-shadow: 0 0 5px white;
   border: 1px solid gray;
@@ -102,16 +98,28 @@ body {
   border: 1px solid whitesmoke;
   border-radius: 50%;
 }
+
 .book {
   font-family: Georgia;
 }
-
-
 
 .book__content {
   box-sizing: border-box;
   padding: 20px;
 }
+
 .book p:first-letter {
   font-size: 28px;
+}
+
+.text_color_black {
+  background: #000;
+}
+
+.text_color_gray {
+  background: grey;
+}
+
+.text_color_whitesmoke {
+  background: whitesmoke;
 }
