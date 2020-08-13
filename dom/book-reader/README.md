@@ -82,11 +82,13 @@ __Цвет текста:__
 
 1. book_color-gray
 2. book_color-whitesmoke
+3. book_color-black
 
 __Фон:__
 
 1. book_bg-gray
 2. book_bg-black
+3. book_bg-white
 
 Принцип простановки классов аналогичный с основным заданием
 

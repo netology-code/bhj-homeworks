@@ -22,6 +22,10 @@ body {
   font-size: 12px;
 }
 
+.book_color-black {
+  color: black;
+}
+
 .book_color-gray {
   color: gray;
 }
@@ -31,11 +35,15 @@ body {
 }
 
 .book_bg-gray {
-  background: whitesmoke;
+  background: grey;
 }
 
 .book_bg-black {
   background: black;
+}
+
+.book_bg-white {
+  background: white;
 }
 
 .book__controls {
