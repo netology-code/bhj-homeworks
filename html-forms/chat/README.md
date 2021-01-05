@@ -43,7 +43,7 @@ HTML-структура сообщения в чате такова:
 Сообщение, которое отправляется пользователем, должно иметь класс *message_client*:
 
 ```html
-<div class="message">
+<div class="message message_client">
     <div class="message__time">21:10</div>
     <div class="message__text">Добрый день! Хочу купить розы для любимой!</div>
 </div>
