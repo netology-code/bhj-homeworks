@@ -1,18 +1,20 @@
-let links = document.querySelectorAll('.menu__link') ;
-  for (i = 0;i < links.length; i++) {
-    if (i = 1) {
-      let about = links[i];
-  };
-   if(i = 2) {
-    let service = links[i];
-   };
+let links = document.querySelectorAll(".menu__link");
+let menuSub = document.querySelectorAll(".menu_sub");
+let menuClassNameSecond = menuSub[1].className;
+let menuClassNameFirst = menuSub[0].className;
+let firstLink = links[1];
+let secondLink = links[2];
+
+  function  menuFirst() {
+  menuClassNameFirst = "menu menu_sub menu_active";
+
 };
-function eventAbout () {
-  about.setAttribute("class", "menu menu_sub menu_active");
-  links[2].setAttribute("class","menu menu_sub");
+ function  menuSecond(){
+  menuClassNameSecond = "menu menu_sub menu_active";
+
 };
-about.addEventListenet(click,eventAbout);
-function eventServices () {
-  service.setAttribute("class","menu menu_sub menu_active");
-  links[1].setAttribute("class","menu menu_sub");
-};
+
+
+
+firstLink.addEventListener('click', menuFirst);
+secondLink.addEventListener('click',menuSecond);
