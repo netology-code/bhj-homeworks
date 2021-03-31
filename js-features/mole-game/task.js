@@ -6,7 +6,7 @@ let counterLose =document.getElementById("lost");
 console.log(holes);
 
 
-for (i = 1 ; i < holes.length ; i++) {
+for (i = 0 ; i < holes.length ; i++) {
   holes[i].onclick = function() {
     if(this.className.includes("hole_has-mole")) {
       counterWin.textContent = +counterWin.textContent + 1;
