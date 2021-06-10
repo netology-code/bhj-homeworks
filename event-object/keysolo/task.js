@@ -30,7 +30,7 @@ class Game {
     this.timer.textContent--; 
     if (this.timer.textContent == 0);
       this.fail();
-  };
+  }; 
 
   success() {
     this.currentSymbol.classList.add('symbol_correct');
