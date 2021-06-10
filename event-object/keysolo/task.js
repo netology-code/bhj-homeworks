@@ -30,7 +30,7 @@ class Game {
     this.timer.textContent--; 
     if (this.timer.textContent == 0);
       this.fail();
-  }
+  };
 
   success() {
     this.currentSymbol.classList.add('symbol_correct');
@@ -44,13 +44,13 @@ class Game {
       this.reset();
     };
     this.setNewWord();
-  }
+  };
 
   fail() {
     if (++this.lossElement.textContent === 5) {
       alert('Вы проиграли!');
       this.reset();
-    }
+    };
     this.setNewWord();
   };
 
