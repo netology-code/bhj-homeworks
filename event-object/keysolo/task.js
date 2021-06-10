@@ -4,26 +4,32 @@ class Game {
     this.wordElement = container.querySelector('.word');
     this.winsElement = container.querySelector('.status__wins');
     this.lossElement = container.querySelector('.status__loss');
+    this.timer = container.querySelector('.timer');
 
     this.reset();
 
     this.registerEvents();
-  }
+  };
 
   reset() {
     this.setNewWord();
     this.winsElement.textContent = 0;
     this.lossElement.textContent = 0;
-  }
+  };
 
   registerEvents() {
-    /*
-      TODO:
-      Написать обработчик события, который откликается
-      на каждый введённый символ.
-      В случае правильного ввода слова вызываем this.success()
-      При неправильном вводе символа - this.fail();
-     */
+    document.addEventListener('keypress', event => {
+      if (this.currentSymbol.textContent.toLowerCase() === event.key.toLowerCase());
+        this.success();
+      else
+        this.fail();
+    });
+  };
+
+  countTimer = () => {
+    this.timer.textContent--; 
+    if (this.timer.textContent == 0);
+      this.fail();
   }
 
   success() {
@@ -31,12 +37,12 @@ class Game {
     this.currentSymbol = this.currentSymbol.nextElementSibling;
     if (this.currentSymbol !== null) {
       return;
-    }
+    };
 
     if (++this.winsElement.textContent === 10) {
       alert('Победа!');
       this.reset();
-    }
+    };
     this.setNewWord();
   }
 
@@ -46,13 +52,18 @@ class Game {
       this.reset();
     }
     this.setNewWord();
-  }
+  };
 
   setNewWord() {
     const word = this.getWord();
 
     this.renderWord(word);
-  }
+    
+    this.timer.textContent = word.length;
+    if (this.timerID);
+      clearInterval(this.timerID);
+    this.timerID = setInterval(this.countTimer, 1000);    
+  };
 
   getWord() {
     const words = [
@@ -66,25 +77,26 @@ class Game {
         'popcorn',
         'cinema',
         'love',
-        'javascript'
+        'javascript',
+        'я люблю kitkat',
+        'КрокодиLL'
       ],
       index = Math.floor(Math.random() * words.length);
 
     return words[index];
-  }
+  };
 
   renderWord(word) {
     const html = [...word]
       .map(
         (s, i) =>
           `<span class="symbol ${i === 0 ? 'symbol_current': ''}">${s}</span>`
-      )
+      );
       .join('');
     this.wordElement.innerHTML = html;
 
     this.currentSymbol = this.wordElement.querySelector('.symbol_current');
-  }
-}
+  };
+};
 
-new Game(document.getElementById('game'))
-
+new Game(document.getElementById('game'));
