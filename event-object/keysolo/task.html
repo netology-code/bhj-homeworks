@@ -7,24 +7,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Соло на клавиатуре</title>
     <link rel="stylesheet" href="task.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
-    <div id="game">
-        <div class="status">
-            <p>
-                Правильно введённых слов: <span class="status__wins">0</span>
-            </p>
-            <p>
-                Неправильно введённых слов: <span class="status__loss">0</span>
-            </p>
+    <header class="header">
+        <div class="logo__container">
+          <a href="https://netology.ru/" class="logo__link"></a>
         </div>
-        <div class="word">
-            <span class="symbol">К</span>
-            <span class="symbol">о</span>
-            <span class="symbol">л</span>
-            <span class="symbol">я</span>
+        <h1 class="header__title">
+            Домашнее задание к занятию 1.3 «Объект события». Соло на клавиатуре.
+        </h1>
+    </header>
+    <main class="content">
+        <div class="card">
+            <div id="game">
+                <div class="status">
+                    <p>
+                        Правильно введённых слов: <span class="status__wins">0</span>
+                    </p>
+                    <p>
+                        Неправильно введённых слов: <span class="status__loss">0</span>
+                    </p>
+                </div>
+                <div class="word">
+                    <span class="symbol">К</span>
+                    <span class="symbol">о</span>
+                    <span class="symbol">л</span>
+                    <span class="symbol">я</span>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
+    
     <script src="task.js"></script>
 </body>
 </html>

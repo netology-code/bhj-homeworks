@@ -1,7 +1,3 @@
-body {
-  font-family: 'Arial';
-}
-
 .signin {
   display: none;
 }
@@ -9,23 +5,36 @@ body {
   display: block;
 }
 .control {
-  padding: 20px;
-  border-radius: 25px;
-  border: 1px solid gray;
-  width: 200px;
-  box-sizing: border-box;
+    width: 100%;
+    display: block;
+    padding: 10px 20px;
+    margin: 0 0 20px 0;
+    font-family: Golos, Arial, sans-serif;
+    border: 1px solid #e2e2e2;
+    box-sizing: border-box;
 }
 
 .btn {
-  background: green;
-  color: white;
-  padding: 20px;
-  border-radius: 25px;
-  border: none;
-  display: block;
-  width: 200px;
+  font-family: Golos, Arial, sans-serif;
+  color: #fff;
+  background-color: #06f;
+  border: 1px solid transparent;
+  border-radius: 2px;
   box-sizing: border-box;
   cursor: pointer;
+  display: inline-block;
+  margin: 0 0 20px 0;
+  overflow: hidden;
+  outline: none;
+  padding: 8px 12px;
+  text-align: center;
+  transition: 0.3s ease;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  font-weight: 500;
+  box-shadow: none;
 }
 
 .welcome {
@@ -34,4 +43,5 @@ body {
 
 .welcome_active {
   display: block;
+  text-align: center;
 }

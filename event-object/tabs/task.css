@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 10px 0;
+  background-color: #f3f4f7;
 }
 
 .tab {

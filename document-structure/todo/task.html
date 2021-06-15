@@ -6,24 +6,38 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Список задач</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="task.css">
 </head>
 <body>
-    <div class="tasks" id="tasks">
-        <form class="tasks__control" id="tasks__form">
-            <input type="text" class="tasks__input" id="task__input" placeholder="Введите название новой задачи">
-            <button class="tasks__add" id="tasks__add">Добавить</button>
-        </form>
-        <div class="tasks__list" id="tasks__list">
-            <!-- стандартный шаблон задачи -->
-            <!-- <div class="task">
-              <div class="task__title">
-                Сходить в магазин
-              </div>
-              <a href="#" class="task__remove">&times;</a>
-            </div> -->
+    <header class="header">
+        <div class="logo__container">
+          <a href="https://netology.ru/" class="logo__link"></a>
         </div>
-    </div>
+        <h1 class="header__title">
+            Домашнее задание к занятию 2.3 «Изменение структуры HTML-документа». Простой список дел.
+        </h1>
+    </header>
+    <main class="content">
+        <div class="card">
+            <div class="tasks" id="tasks">
+                <form class="tasks__control" id="tasks__form">
+                    <input type="text" class="tasks__input" id="task__input" placeholder="Введите название новой задачи">
+                    <button class="tasks__add" id="tasks__add">Добавить</button>
+                </form>
+                <div class="tasks__list" id="tasks__list">
+                    <!-- стандартный шаблон задачи -->
+                    <!-- <div class="task">
+                      <div class="task__title">
+                        Сходить в магазин
+                      </div>
+                      <a href="#" class="task__remove">&times;</a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </main>
+    
     <script src="task.js"></script>
 </body>
 </html>

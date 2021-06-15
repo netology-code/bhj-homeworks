@@ -5,15 +5,33 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cookie Clicker</title>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <title>Игра-кликер</title>
 </head>
 <body>
-    <div class="clicker">
-        <div class="clicker__status">
-            Всего кликов <span id="clicker__counter">0</span>
+    <header class="header">
+        <div class="logo__container">
+          <a href="https://netology.ru/" class="logo__link"></a>
         </div>
-        <img src="https://i.postimg.cc/T1bWdf2y/1024px-Pepperidge-Farm-Nantucket-Cookie.jpg" alt="" id="cookie" class="clicker__cookie" width="200">
-    </div>
+        <h1 class="header__title">
+            Домашнее задание к занятию 1.1 «Возможности JavaScript в браузере». Игра-кликер.
+        </h1>
+    </header>
+    <main class="content">
+        <div class="card">
+            <div class="clicker">
+                <div class="clicker__status">
+                    Всего кликов <span id="clicker__counter">0</span>
+                </div>
+                <img 
+                    src="https://i.postimg.cc/T1bWdf2y/1024px-Pepperidge-Farm-Nantucket-Cookie.jpg" 
+                    alt=""
+                    id="cookie"
+                    class="clicker__cookie"
+                    width="200">
+            </div>
+        </div>
+    </main>    
     <script src="task.js"></script>
 </body>
 </html>

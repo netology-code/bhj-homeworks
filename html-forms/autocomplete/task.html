@@ -7,26 +7,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Autocomplete</title>
     <link rel="stylesheet" href="task.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
-    <p>
-        Справочник крокодила Гены <b>Ч</b>:
-    </p>
-    <div class="autocomplete">
-        <div class="autocomplete__helper">
-            <div class="autocomplete__value">
-                <div class="autocomplete__text-content">Чебурашка</div>
-                <input type="text" name="" class="autocomplete__search" placeholder="Поиск">
-            </div>
-            <ul class="autocomplete__list"></ul>
+    <header class="header">
+        <div class="logo__container">
+          <a href="https://netology.ru/" class="logo__link"></a>
         </div>
-        <select class="autocomplete__input">
-            <option value="1">Чебурашка</option>
-            <option value="2">Чебоксары</option>
-            <option value="3">Чемодан</option>
-            <option value="4">Чебурек</option>
-        </select>
-    </div>
+        <h1 class="header__title">
+            Домашнее задание к занятию 2.2 «Работа с HTML-формами». Выпадающий список с поиском.
+        </h1>
+    </header>
+    <main class="content">
+        <div class="card">
+            <p>
+                Справочник крокодила Гены <b>Ч</b>:
+            </p>
+            <div class="autocomplete">
+                <div class="autocomplete__helper">
+                    <div class="autocomplete__value">
+                        <div class="autocomplete__text-content">Чебурашка</div>
+                        <input type="text" name="" class="autocomplete__search" placeholder="Поиск">
+                    </div>
+                    <ul class="autocomplete__list"></ul>
+                </div>
+                <select class="autocomplete__input">
+                    <option value="1">Чебурашка</option>
+                    <option value="2">Чебоксары</option>
+                    <option value="3">Чемодан</option>
+                    <option value="4">Чебурек</option>
+                </select>
+            </div>
+        </div>
+    </main>    
     <script src="task.js"></script>
 </body>
 </html>

@@ -7,59 +7,73 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Список интересов</title>
     <link rel="stylesheet" href="task.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
-    <div class="interests interests_main">
-        <ul>
-            <li class="interest">
-                <label>
-                    <input type="checkbox" class="interest__check">Еда
-                </label>
-                <ul class="interests interests_active">
+    <header class="header">
+        <div class="logo__container">
+          <a href="https://netology.ru/" class="logo__link"></a>
+        </div>
+        <h1 class="header__title">
+            Домашнее задание к занятию 2.2 «Работа с HTML-формами». Дерево интересов.
+        </h1>
+    </header>  
+    <main class="content">
+        <div class="card">
+            <div class="interests interests_main">
+                <ul>
                     <li class="interest">
                         <label>
-                            <input type="checkbox" class="interest__check">Колбаса
+                            <input type="checkbox" class="interest__check">Еда
                         </label>
+                        <ul class="interests interests_active">
+                            <li class="interest">
+                                <label>
+                                    <input type="checkbox" class="interest__check">Колбаса
+                                </label>
+                            </li>
+                            <li class="interest">
+                                <label>
+                                    <input type="checkbox" class="interest__check">Сыр
+                                </label>
+                            </li>
+                        </ul>
                     </li>
                     <li class="interest">
                         <label>
-                            <input type="checkbox" class="interest__check">Сыр
+                            <input type="checkbox" class="interest__check">Домашние животные
                         </label>
+                        <ul class="interests interests_active">
+                            <li class="interest">
+                                <label>
+                                    <input type="checkbox" class="interest__check">Котики
+                                </label>
+                                <!-- Задание повышенной сложности. Раскомментируйте код -->
+                                <!--<ul class="interests interests_active">-->
+                                    <!--<li class="interest">-->
+                                        <!--<label>-->
+                                            <!--<input type="checkbox" class="interest__check">Умные-->
+                                        <!--</label>-->
+                                    <!--</li>-->
+                                    <!--<li class="interest">-->
+                                        <!--<label>-->
+                                            <!--<input type="checkbox" class="interest__check">Глупые-->
+                                        <!--</label>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            </li>
+                            <li class="interest">
+                                <label>
+                                    <input type="checkbox" class="interest__check">Собаки
+                                </label>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
-            </li>
-            <li class="interest">
-                <label>
-                    <input type="checkbox" class="interest__check">Домашние животные
-                </label>
-                <ul class="interests interests_active">
-                    <li class="interest">
-                        <label>
-                            <input type="checkbox" class="interest__check">Котики
-                        </label>
-                        <!-- Задание повышенной сложности. Раскомментируйте код -->
-                        <!--<ul class="interests interests_active">-->
-                            <!--<li class="interest">-->
-                                <!--<label>-->
-                                    <!--<input type="checkbox" class="interest__check">Умные-->
-                                <!--</label>-->
-                            <!--</li>-->
-                            <!--<li class="interest">-->
-                                <!--<label>-->
-                                    <!--<input type="checkbox" class="interest__check">Глупые-->
-                                <!--</label>-->
-                            <!--</li>-->
-                        <!--</ul>-->
-                    </li>
-                    <li class="interest">
-                        <label>
-                            <input type="checkbox" class="interest__check">Собаки
-                        </label>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+            </div>
+        </div>
+    </main>
+    
     <script src="task.js"></script>
 </body>
 </html>
