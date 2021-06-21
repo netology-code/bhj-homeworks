@@ -43,8 +43,13 @@
   box-sizing: border-box;
   border-bottom: 1px solid gray;
   border-radius: 4px;
+  background-color: #fff;
 }
 
 .dropdown__list_active {
   display: block;
+}
+
+.card {
+  text-align: center;
 }

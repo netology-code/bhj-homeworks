@@ -1,0 +1,52 @@
+progress {
+    margin-bottom: 10px;
+}
+
+form {
+  position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+button {
+    font-size: 14px;
+}
+
+#file:focus ~ label {
+    border: 1px solid #e2e2e2;
+}
+
+.card {
+  width: 600px;
+}
+
+.input__wrapper {
+  display: inline-block;
+}
+
+.input__wrapper-button {
+  font-family: Golos, Arial, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  background-color: #06f;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.input__wrapper-button:hover {
+  background-color: #005ce6;
+}
