@@ -24,6 +24,18 @@ class Game {
       В случае правильного ввода слова вызываем this.success()
       При неправильном вводе символа - this.fail();
      */
+
+     let symbols = arrayFrom(document.querySelectorAll('.symbol'));
+     let onKey = (event) => {
+       let key = string.fromCharCode(event.code);
+       if (this.currentSymbol === key) {
+         this.success();
+       }
+       else (this.fail())
+     }
+     this.currentSymbol("keyup", onKey);
+
+
   }
 
   success() {
@@ -87,4 +99,3 @@ class Game {
 }
 
 new Game(document.getElementById('game'))
-
