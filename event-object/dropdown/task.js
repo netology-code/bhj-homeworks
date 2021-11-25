@@ -1,25 +1,31 @@
-let dropdown = document.querySlector('dropdown__value');
 
-dropdown.onclick = function () {
-  if (dropdown.classList.includes('dropdown__list_active')) {
-    dropdown.classList.remove('dropdown__list_active')
-  }
-  else dropdown.classList.add('dropdown__list_active');
-}
-let array = arrayFrom(document.querySelectorAll('dropdown__link'));
-array.forEach((element, i) => {
-  array[i].onclick = function (event) {
-    dropdown.textContent = array[i].textContent;
-    preventDefault();
-  }
-});
+  let dropdownValue = document.querySelector(".dropdown__value");
+  let dropdownList = document.querySelector(".dropdown__list");
+  let dropdownLinks = Array.from(document.querySelectorAll(".dropdown__link"));
+  let dropdownItems = Array.from(document.querySelectorAll(".dropdown__item"));
 
-//array.forEach((elemnt, i) => {
-//array[i].onclick =>(event) {
-  //if (event.target == array[i]) {
-    //dropdown.textContent = array[i].textContent;
-    //preventDefault();
-  //}
-//}
+function dropdown () {
+  dropdownList.classList.add('dropdown__list_active');
+  console.log(dropdownList.classList);
+};
+  dropdownValue.addEventListener('click', dropdown);
 
+
+    dropdownItems.forEach ((item) => {
+
+      item.addEventListener('click',  (event) => {
+      event.preventDefault();
+      console.log(event.currentTarget.textContent);
+      dropdownValue.textContent = event.currentTarget.textContent;
+      dropdownList.classList.remove('dropdown__list_active');
+    });
+  });
+
+//альтернативный вариант
+// for (i = 0; i < dropdownItems.length ; i++) {
+//dropdownItems[i].addEventListener('click', (event) => {
+  //event.preventDefault();
+  //dropdownValue.textContent = event.currentTarget.textContent;
+  //dropdownList.classList.remove('dropdown__list_active');
 //});
+//};
