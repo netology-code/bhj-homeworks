@@ -17,6 +17,36 @@ class Game {
   }
 
   registerEvents() {
+console.log(document.querySelectorAll('.symbol'));
+let symbols = Array.from(document.querySelectorAll('.symbol'));
+console.log(symbols);
+let ArrayOfSymbols = [];
+for ( let i = 0 ; i < symbols.length ; i++) {
+  ArrayOfSymbols.push(symbols[i].textContent);
+}
+
+symbols.forEach((item) => {
+  document.body.addEventListener('keyup', (event)=> {
+  this.currentSymbol = item;
+  let charCode = event.key;
+  console.log (this.currentSymbol);
+  console.log(charCode);
+  let letter = this.currentSymbol.toLowerCase();
+  let currentLetter = string.fromCharCode(charCode);
+  let lowerCurrent = currentLetter.toLowerCase();
+  console.log(letter);
+  console.log(currentLetter);
+  console.log(lowerCurrent);
+    if (letter === lowerCurrent) {
+      this.success();
+
+    } else {
+      this.fail();
+      };
+    });
+  });
+};
+
     /*
       TODO:
       Написать обработчик события, который откликается
@@ -24,19 +54,6 @@ class Game {
       В случае правильного ввода слова вызываем this.success()
       При неправильном вводе символа - this.fail();
      */
-
-     let symbols = arrayFrom(document.querySelectorAll('.symbol'));
-     let onKey = (event) => {
-       let key = string.fromCharCode(event.code);
-       if (this.currentSymbol === key) {
-         this.success();
-       }
-       else (this.fail())
-     }
-     this.currentSymbol("keyup", onKey);
-
-
-  }
 
   success() {
     this.currentSymbol.classList.add('symbol_correct');
