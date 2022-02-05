@@ -5,6 +5,9 @@ clicker__counter.onclick = function() {
 }
 cookie.onclick = function() {
     cookie.width += 100;
-    cookie.width -= 100;
+    cookie.onclick = null;
+}
+cookie.onclick = function() {
+    cookie.width += 100;
     cookie.onclick = null;
 }
