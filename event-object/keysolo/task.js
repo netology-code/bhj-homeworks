@@ -17,6 +17,17 @@ class Game {
   }
 
   registerEvents() {
+    const symbol = this.currentSymbolюdocument.textContent.fromCharCode();
+    const arr = Array.from(symbol);
+    for(let i = 0; i++; i < arr.length) {
+      if(arr[i].key) {
+        this.success();
+      }
+      else if(arr[i].key) {
+        this.fail();
+      }
+    }
+  
     /*
       TODO:
       Написать обработчик события, который откликается
