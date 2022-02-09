@@ -68,6 +68,20 @@ class Autocomplete {
   }
 
   getMatches( text ) {
+    const autocomplete__input = DocumentFragment.getElementsByClassName = ('autocomplete__input');
+    const select_arr = Array.from(autocomplete__input);
+
+    function input() {
+      document.getElementById('result').innerHTML = this.target.value;
+      for(i=0; i < select_arr.length; i++) {
+        if(select_arr[i].selected) {
+          console.log(select_arr[i].value)
+        }
+      }
+    }
+    autocomplete__input.addEventListener('input', input);
+    
+    
     /*
       TODO: этот метод нужно дописать
       text - фраза, которую вводят в поле поиска
