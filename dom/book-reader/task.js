@@ -1,10 +1,10 @@
 const a = document.querySelectorAll('a');
 const div = document.querySelectorAll('div');
 
-for(elem of a) {
+for(const elem of a) {
     elem.addEventListener(click, function() {
         elem.classList.add('font-size_active');
-        for(book of div) {
+        for(const book of div) {
             if(book.classList.contains('book_fs-big')) {
                 book.classList.add('big');
             }
