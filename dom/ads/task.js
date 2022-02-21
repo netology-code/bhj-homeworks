@@ -13,6 +13,6 @@ for(let i = 0; i++; i < arr.length) {
     setInterval(toggleClass, 1000);
 }
 
-const span = document.querySelector('span');
+const span = document.querySelectorAll('span');
 console.log(span.dataset.speed);
 console.log(span.dataset.color);
