@@ -1,11 +1,14 @@
-const tab = document.getElementByClassName('tab');
-const tab__content = document.getElementByClassName('tab__content');
+const tab = document.getElementsByClassName('tab');
+const tab__content = document.getElementsByClassName('tab__content');
 
-tab.addEventListener(click, function() {
-    tab.className = 'tab_active';
-});
+const tab_arr = Array.from(tab);
+const content_arr = Array.from(tab__content);
 
-const arr = Array.from(tab);
-tab__content.item(indexOf(arr)).addEventListener(click, function() {
-    tab__contentitem(indexOf(arr)).className = 'tab__content_active';
-});
+for(let tab_elem of tab_arr) {
+    tab_elem.addEventListener(click, function() {
+        tab_elem.classList.add('tab_active');
+    });
+    content_arr.item(indexOf(tab_elem.classList.contains('tab_active'))).classList.add('tab__content_active');
+}
+
+
