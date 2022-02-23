@@ -2,18 +2,21 @@ const dropdown__list = document.getElementsByClassName('dropdown__list');
 const dropdown__item = document.getElementsByClassName('dropdown__item');
 const dropdown__link = document.getElementsByClassName('dropdown__link');
 
-const arr = Array.from(dropdown__item);
+const arr_item = Array.from(dropdown__item);
+const arr_list = Array.from(dropdown__list);
 
-function dropdown__list_active() {
-    dropdown__list.className = 'dropdown__list_active';
+for(let list of arr_list) {
+    list.addEventListener(click, function() {
+        list.classList.add('dropdown__list_active');
+    })
 }
-dropdown__list.addEventListener(keypress, dropdown__list_active);
-dropdown__list.removeEventListener(keypress, dropdown__list_active);
 
-function dropdown__value() {
-    dropdown__item.item(indexOf(arr).className = 'dropdown__value';
+for(item of arr_item) {
+    item.addEventListener(click, function() {
+        arr_list.find((elem) => elem.classList.contains('dropdown__list_active')).remove('dropdown__list_active');
+        item.classList.add('dropdown__value');
+    });
 }
-dropdown__item.addEventListener(keypress, dropdown__value);
 
 function preventDefault() {
     dropdown__link.preventDefault();
