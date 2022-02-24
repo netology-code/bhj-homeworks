@@ -1,23 +1,25 @@
-const product__quantity_control = document.getElementsByClassName('product__quantity-control');
-const product__quantity_value = document.getElementsByClassName('product__quantity-value');
-const product__quantity_control_dec = document.getElementsByClassName('product__quantity-control_dec');
-const product__quantity_control_inc = document.getElementsByClassName('product__quantity-control_inc');
+const product__quantity_controls = document.getElementsByClassName('product__quantity-controls');
 const cart__product = document.getElementsByClassName('cart__product');
-const product = document.getElementsByClassName('product');
 const cart__product_count = document.getElementsByClassName('cart__product-count');
 
-product__quantity_control_inc.addEventListener('click', function() {
-    if(parseInt(cart__product_count.textContent) > 0) {
-        product__quantity_value.textContent++;
-    }
-    else if(parseInt(cart__product_count.textContent) === 0) {
-        product__quantity_value.textContent++;
-        parseInt(cart__product_count.textContent) === product__quantity_value;
-    }
-})
+let products_arr = Array.from(product__quantity_controls);
+let cart_arr = Array.from(cart__product);
 
-product__quantity_control_dec.addEventListener('click', function() {
-    if(parseInt(cart__product_count.textContent) > 1) {
-        product__quantity_value.textContent--;
+for(let product of products_arr) {
+    for(let cart of cart_arr) {
+        product.children[2].addEventListener('click', function() {
+            if(parseInt(cart.lastElementChild.textContent) > 0) {
+                product.children[1].textContent++;
+            }
+            else if(parseInt(cart.lastElementChild.textContent) === 0) {
+                product.children[1].textContent++;
+                parseInt(cart.lastElementChild.textContent) === product.children[1];
+            }
+        });
+        product.children[0].addEventListener('click', function() {
+            if(parseInt(cart.lastElementChild.textContent) > 1) {
+                pproduct.children[1].textContent--;
+            }
+        });
     }
-})
+}
