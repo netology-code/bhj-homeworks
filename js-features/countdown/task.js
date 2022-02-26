@@ -7,13 +7,12 @@ const output = function() {
         minute: "2-digit",
         second: "2-digit",
     });
+    if(timerToString === 0) {
+        clearInterval(output);
+        alert('Вы победили в конкурсе!');
+        url.href = 'http://hello.kitty';
+    };
+    
 }
 
 setInterval(output, 1000);
-
-if(timerToString === 0) {
-    clearInterval(output);
-    alert('Вы победили в конкурсе!');
-    url.href = 'http://hello.kitty';
-};
-
