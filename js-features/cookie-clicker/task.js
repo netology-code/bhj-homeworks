@@ -7,6 +7,7 @@ let time_1 = Number(new Date());
 let velocity = Number(clicker__velocity.textContent);
 let interval = 0;
 cookie.onclick = function() {
+    this.clicker_timer = clicker_timer;
     clicker_timer++;
     if(clicker_timer % 2 === 0) {
         cookie.width += 100;
