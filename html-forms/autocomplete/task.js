@@ -68,18 +68,15 @@ class Autocomplete {
   }
 
   getMatches( text ) {
-    const autocomplete__input = DocumentFragment.getElementsByClassName = ('autocomplete__input');
-    const select_arr = Array.from(autocomplete__input);
-
-    function input() {
-      document.getElementById('result').innerHTML = this.target.value;
-      for(i=0; i < select_arr.length; i++) {
-        if(select_arr[i].selected) {
-          console.log(select_arr[i].value)
+    const select_arr = Array.from(this.input.options);
+    if(this.input.options.includes(elem => elem === text)) {
+      return [
+        {
+          text: 'Чубакка',
+          value: '1'
         }
-      }
+      ];
     }
-    autocomplete__input.addEventListener('input', input);
     
     
     /*
@@ -95,12 +92,6 @@ class Autocomplete {
         value: 'Содержимое атрибута value'
       }
     */
-    return [
-      {
-        text: 'Чубакка',
-        value: '1'
-      }
-    ];
   }
 }
 
