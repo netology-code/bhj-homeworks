@@ -1,26 +1,21 @@
 const a = document.querySelectorAll('a');
-const div = document.querySelectorAll('div');
+const book = document.getElementById('book');
 
 for(const elem of a) {
-    elem.addEventListener(click, function() {
+    elem.addEventListener('click', function() {
         elem.classList.add('font-size_active');
-        for(const book of div) {
             if(book.classList.contains('book_fs-big')) {
                 book.classList.add('big');
             }
             else if(book.classList.contains('book_fs-small')) {
                 book.classList.add('small');
             }
-        }
+        alert(elem.dataset.bookColorGray);
+        alert(elem.dataset.bookWhitesmoke);
+        alert(elem.dataset.bookColorBlack);
+        alert(elem.dataset.bookBgGray);
+        alert(elem.dataset.bookBgBlack);
+        alert(elem.dataset.bookBgWhite);
+        return false;
     });
 }
-
-console.log(a.dataset.book_color-gray);
-
-// book_color-gray
-//book_color-whitesmoke
-//book_color-black
-
-//book_bg-gray
-//book_bg-black
-//book_bg-white
