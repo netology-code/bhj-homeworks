@@ -1,6 +1,9 @@
 const xhr = new XMLHttpRequest();
 const poll__title = document.getElementById('poll__title');
-const poll__answers =document.getElementById('poll__answers');
+const poll__answers = document.getElementById('poll__answers');
+const buttons = document.querySelectorAll('button');
+
+let buttons_arr = Array.from(buttons);
 
 xhr.open('GET', ' https://netology-slow-rest.herokuapp.com/poll.php');
 xhr.addEventListener('readyStateChange', function() {
@@ -10,7 +13,9 @@ xhr.addEventListener('readyStateChange', function() {
         poll__answers.children.innerHTML = xhr.responseText;
         console.log(JSON.parse(xhr.responseText).responseText.data.title);
         console.log(JSON.parse(xhr.responseText).responseText.data.answers);
-        button.addEventListener('click', () => alert('Спасибо, ваш голос засчитан!'));
+        for(let button of buttons) {
+            button.addEventListener('click', () => alert('Спасибо, ваш голос засчитан!'));
+        }
     }
 
 });
