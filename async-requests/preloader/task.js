@@ -11,7 +11,7 @@ xhr.open('GET', 'https://netology-slow-rest.herokuapp.com');
 xhr.addEventListener('readyStateChange', function() {
 
     if(xhr.readyState === xhr.OPENED) {
-        items.children = xhr.responseText;
+        items.children.innerHTML = xhr.responseText;
         for(let elem of code_arr) {
             elem.innerHTML = JSON.parse(xhr.responseText).responseText.Valute.AUD.CharCode;
             elem.innerHTML = JSON.parse(xhr.responseText).responseText.Valute.AZN.CharCode;
