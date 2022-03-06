@@ -13,13 +13,13 @@ xhr.addEventListener('readyStateChange', function() {
     if(xhr.readyState === xhr.OPENED) {
         items.children.innerHTML = xhr.responseText;
         for(let elem of code_arr) {
-            elem.innerHTML = JSON.parse(xhr.responseText).responseText.Valute.AUD.CharCode;
-            elem.innerHTML = JSON.parse(xhr.responseText).responseText.Valute.AZN.CharCode;
+            elem.innerHTML = JSON.parse(xhr.responseText).Valute.AUD.CharCode;
+            elem.innerHTML = JSON.parse(xhr.responseText).Valute.AZN.CharCode;
         }
     
         for(let elem of value_arr) {
-            elem.innerHTML = JSON.parse(xhr.responseText).responseText.Valute.AUD.Value;
-            elem.innerHTML = JSON.parse(xhr.responseText).responseText.Valute.AZN.Value;
+            elem.innerHTML = JSON.parse(xhr.responseText).Valute.AUD.Value;
+            elem.innerHTML = JSON.parse(xhr.responseText).Valute.AZN.Value;
         }
     }
 
