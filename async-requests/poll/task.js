@@ -11,8 +11,8 @@ xhr.addEventListener('readyStateChange', function() {
     if(xhr.readyState === xhr.OPENED) {
         poll__title.children.innerHTML = xhr.responseText;
         poll__answers.children.innerHTML = xhr.responseText;
-        console.log(JSON.parse(xhr.responseText).responseText.data.title);
-        console.log(JSON.parse(xhr.responseText).responseText.data.answers);
+        console.log(JSON.parse(xhr.responseText).data.title);
+        console.log(JSON.parse(xhr.responseText).data.answers);
         for(let button of buttons) {
             button.addEventListener('click', () => alert('Спасибо, ваш голос засчитан!'));
         }
