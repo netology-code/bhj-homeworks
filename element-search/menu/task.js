@@ -1,25 +1,22 @@
-const menu__link = document.getElementsByClassName('menu__link');
-const a = document.querySelectorAll('a');
-
-let arr_menu__link = Array.from(menu__link);
-for(let i = 0; i < arr_menu__link.length; i++) {
-    arr_menu__link[i].onclick = function() {
-        if(arr_menu__link[i].nextElementSibling.classList.contains('menu_sub')) {
-            arr_menu__link[i].nextElementSibling.classList.add('menu_active');
-            let arr_filter = arr_menu__link.filter((elem) => elem !== arr_menu__link[i]);
-            for(let elem of arr_filter) {
-                elem.classList.remove('menu_active');
+const menu_sub = document.getElementsByClassName('menu_sub');
+let arr_sub = Array.from(menu_sub);
+for(let sub of arr_sub) {
+    const links = sub.closest.querySelectorAll('a');
+    let arr_links = Array.from(links);
+    for(let link of arr_links) {
+        link.onclick = function() {
+            sub.classList.add('menu_active');
+            for(let sub_active of arr_sub) {
+                if(sub_active.classList.contains('menu_active')&&(sub_active !== sub)) {
+                    sub_active.classList.remove('menu_active');
+                }
+                else if(sub_active === sub) {
+                    sub_active.classList.remove('menu_active');
+                    return false;
+                }
             }
         }
     }
 }
 
-let a_arr = Array.from(a);
-for(let elem of a) {
-    elem.onclick = function() {
-        if(elem.closest.classList.contains('menu__item')) {
-            return false;
-        }
-    }
-}
 
