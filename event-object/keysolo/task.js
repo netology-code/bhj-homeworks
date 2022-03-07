@@ -17,9 +17,9 @@ class Game {
   }
 
   registerEvents() {
-    const symbol_1 = this.currentSymbol.textContent.fromCharCode().toLowerCase();
-    const symbol_2 = KeyboardEvent.textContent.fromCharCode().toLowerCase();
-    KeyboardEvent.addEventListener(keyup, function() {
+    const symbol_1 = Number(this.currentSymbol.textContent.fromCharCode.toLowerCase());
+    const symbol_2 = Number(KeyboardEvent.textContent.fromCharCode.toLowerCase());
+    KeyboardEvent.addEventListener('keyup', function() {
       if(symbol_1 === symbol_2) {
         this.success();
       }
@@ -36,7 +36,7 @@ class Game {
       В случае правильного ввода слова вызываем this.success()
       При неправильном вводе символа - this.fail();
      */
-  }
+
 
   success() {
     this.currentSymbol.classList.add('symbol_correct');
