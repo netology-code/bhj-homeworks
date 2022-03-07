@@ -5,10 +5,10 @@ const tab_arr = Array.from(tab);
 const content_arr = Array.from(tab__content);
 
 for(let tab_elem of tab_arr) {
-    tab_elem.addEventListener(click, function() {
+    tab_elem.addEventListener('click', function() {
         tab_elem.classList.add('tab_active');
     });
-    content_arr.item(indexOf(tab_elem.classList.contains('tab_active'))).classList.add('tab__content_active');
+    content_arr[(tab_arr.indexOf(tab_elem))].classList.add('tab__content_active');
 }
 
 
