@@ -7,7 +7,7 @@ const output = function() {
         minute: "2-digit",
         second: "2-digit",
     });
-    if(timerToString === 0) {
+    if((timerToString.toString.hour === 0)&&(timerToString.toString.minute === 0)&&(timerToString.toString.second === 0)) {
         clearInterval(output);
         alert('Вы победили в конкурсе!');
         url.href = 'http://hello.kitty';
