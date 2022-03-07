@@ -5,8 +5,9 @@ let dead_count = Number(dead.textContent);
 let lost_count = Number(lost.textContent);
 
 let index = Math.floor( 1 + Math.random() * 9 )
-getHole = index => hole = document.getElementById('hole' + index);
-for(let elem of getHole(index)) {
+let getHole = index => hole = document.getElementById('hole' + index);
+let arr_getHole = Array.from(getHole(index));
+for(let elem of arr_getHole) {
     elem.onclick = function() {
         if(elem.classList.contains('hole_has-mole')) {
             dead_count += 1;
