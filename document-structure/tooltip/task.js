@@ -1,9 +1,10 @@
-const helpers = document.getElementsByClassName('has-tooltip');
-const arr_helpers = Array.from(helpers);
-for (let helper of arr_helpers) {
-    function helper_show() {
-        helper.classList.add('tooltip_active');
-        console.log(helper.getAttribute('title'));
-    }
-helper.addEventListener('click', helper_show());
+const has_tooltip = document.getElementsByClassName('has-tooltip');
+const arr_tooltip = Array.from(has_tooltip);
+
+for (let tooltip of arr_tooltip) {
+    tooltip.addEventListener('click', function() {
+        tooltip.nextElementSibling.classList.toggle('tooltip_active');
+        console.log(tooltip.nextElementSibling.textContent);
+        tooltip.preventDefault();
+    });
 }
