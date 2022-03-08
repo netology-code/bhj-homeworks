@@ -1,27 +1,28 @@
 const chat_widget = document.getElementsByClassName('chat-widget');
-const message = document.getElementsByClassName('message');
-const message__text = document.getElementsByClassName('message__text');
-const message__time = document.getElementsByClassName('message__time');
-const message_time = message__text.random().previousElement;
-
-chat_widget.addEventListener('click', function() {
-    chat_widget.classList.add('chat-widget_active');    
-})
-
-const message_return = Array.from('message__text');
+const message_client = document.getElementsByClassName('message_client');
+const messages = document.querySelector( '.chat-widget__messages' );
 
 
-const form = document.forms['register-form'];
+let arr_widget = Array.from(chat_widget);
+let arr_client = Array.from(message_client);
 
-function submit() {
-    if(KeyboardEvent.charCode = 13) {
-        message.classList.add('message_client');
-        form.addEventListener('submit', event => {
-            form.submit();
-        })
-    }
-    console.log(message__text.random().textContent);
-    console.log(message_time.innreHTML = Date());
+for(let widget of arr_widget) {
+    widget.addEventListener('click', function() {
+        widget.classList.add('chat-widget_active');    
+    });
+    widget.addEventListener('submit', function() {
+        for(let message of arr_client) {
+            if(message.lastChild.textContent) {
+                messages.innerHTML += `
+                <div class="message">
+                <div class="message__time">09:21</div>
+                <div class="message__text">
+                Добрый день, мы ещё не проснулись. Позвоните через 10 лет
+                </div>
+                </div>`;
+            }
+            message.firstChild.textContent = Date();
+        }
+    });
 }
-
 
