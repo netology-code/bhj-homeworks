@@ -68,15 +68,20 @@ class Autocomplete {
   }
 
   getMatches( text ) {
+    const arr = [];
     const select_arr = Array.from(this.input.options);
-    if(this.input.options.includes(elem => elem === text)) {
-      return [
+    for(let elem of select_arr) {
+      if(elem === text) {
+        arr.push(elem);
+        return arr[
         {
           text: 'Чубакка',
           value: '1'
         }
       ];
     }
+  }
+}
     
     
     /*
