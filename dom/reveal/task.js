@@ -3,9 +3,12 @@ const viewportHeight = window.innerHeight;
 const revealTop = reveal.getBoundingClientRect().top;
 const revealBottom = reveal.getBoundingClientRect().bottom;
 
-function isInViewport() {
-    if((revealTop < viewportHeight)&&(revealBottom > viewportHeight)) {
-        reveal.className = 'reveal_active';
-    }
+let reveal_arr = Array.from(reveal);
+
+for(let elem of reveal_arr) {
+    elem.addEventListener('onscroll', function() {
+        if((revealTop < viewportHeight)&&(revealBottom > viewportHeight)) {
+            reveal.classList.add('reveal_active');
+        }
+    });
 }
-reveal.addEventListener(onscroll, isInViewport);
