@@ -10,7 +10,7 @@ for(let sub of arr_sub) {
                 return false;
             }
             else if(arr_sub.some(elem => elem.classList.contains('menu_active'))) {
-                arr_sub[findIndex(elem => elem.classList.contains('menu_active'))].remove('menu_active');
+                arr_sub[arr_sub.findIndex(elem => elem.classList.contains('menu_active'))].classList.remove('menu_active');
                 return false;
             }
             else {
