@@ -17,9 +17,9 @@ class Game {
   }
 
   registerEvents() {
-    const symbol_1 = Number(this.currentSymbol.textContent.fromCharCode.toLowerCase());
-    const symbol_2 = Number(KeyboardEvent.textContent.fromCharCode.toLowerCase());
-    KeyboardEvent.addEventListener('keyup', function() {
+    const symbol_1 = Number(this.currentSymbol.textContent);
+    const symbol_2 = Number(this.KeyboardEvent.textContent);
+    KeyboardEvent.addEventListener('keyup', () => {
       if(symbol_1 === symbol_2) {
         this.success();
       }
