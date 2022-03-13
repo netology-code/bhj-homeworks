@@ -1,13 +1,12 @@
 const dead = document.getElementById('dead');
 const lost = document.getElementById('lost');
+const hole = document.getElementsByClassName('hole');
 
-let dead_count = Number(dead.textContent);
-let lost_count = Number(lost.textContent);
+const dead_count = Number(dead.textContent);
+const lost_count = Number(lost.textContent);
 
-let index = Math.floor( 1 + Math.random() * 9 )
-let getHole = index => hole = document.getElementById('hole' + index);
-let arr_getHole = Array.from(getHole(index));
-for(let elem of arr_getHole) {
+const arr_hole = Array.from(hole);
+for(const elem of arr_hole) {
     elem.onclick = function() {
         if(elem.classList.contains('hole_has-mole')) {
             dead_count += 1;
