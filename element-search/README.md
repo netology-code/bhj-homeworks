@@ -26,8 +26,8 @@
 
 1. [Информация о getElementById](https://getelementbyid.ru)
 2. [Поиск: getElement* и querySelector* и не только](https://learn.javascript.ru/searching-elements-dom)
-3. [JavaScript кэширование](https://ruhighload.com/javascript+кэширование)
-4. [Кэширование в JavaScript](http://www.cwpro.ru/study/seo-optimisation/caching-in-javascript.html)
+3. JavaScript кэширование - материал на коррекции. Скоро обновим ссылку
+4. Кэширование в JavaScript - материал на коррекции. Скоро обновим ссылку
 5. [HTMLCollection, NodeList и массив объектов](https://medium.com/@kanby/htmlcollection-nodelist-и-массив-объектов-582cbd9ae1fc)
 6. [DOM: NodeList vs HTMLCollection](http://xahlee.info/js/js_array_vs_nodelist_vs_html_collection.html)
 7. [HTMLCollections & NodeLists](http://alebelcor.github.io/2011/htmlcollections-nodelists/) 
