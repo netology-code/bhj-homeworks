@@ -8,7 +8,7 @@ let code_arr = Array.from(item__code);
 let value_arr = Array.from(item__value);
 
 xhr.open('GET', 'https://netology-slow-rest.herokuapp.com');
-xhr.addEventListener('readyStateChange', function() {
+xhr.addEventListener('progress', function() {
 
     if(xhr.readyState === xhr.OPENED) {
         items.children.innerHTML = xhr.responseText;
@@ -27,4 +27,5 @@ xhr.addEventListener('readyStateChange', function() {
         loader.classList.remove('loader_active');
     }
 
-})
+});
+xhr.send();
