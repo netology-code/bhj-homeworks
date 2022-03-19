@@ -6,7 +6,7 @@ const buttons = document.querySelectorAll('button');
 let buttons_arr = Array.from(buttons);
 
 xhr.open('GET', ' https://netology-slow-rest.herokuapp.com/poll.php');
-xhr.addEventListener('readyStateChange', function() {
+xhr.addEventListener('progress', function() {
 
     if(xhr.readyState === xhr.OPENED) {
         poll__title.children.innerHTML = xhr.responseText;
@@ -19,3 +19,5 @@ xhr.addEventListener('readyStateChange', function() {
     }
 
 });
+xhr.send();
+
