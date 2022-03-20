@@ -1,31 +1,52 @@
+const cart__products = document.querySelector('.cart__products');
+const products = document.getElementsByClassName('product');
 
-
-
-
-
-
-
-
-const product__quantity_controls = document.getElementsByClassName('product__quantity-controls');
-const cart = document.getElementById('1');
 const cart__product_count = document.getElementsByClassName('cart__product-count');
 
-let products_arr = Array.from(product__quantity_controls);
+let products_arr = Array.from(products);
 
 for(let product of products_arr) {
-        product.children[2].addEventListener('click', function() {
-            if(Number(cart.lastElementChild.textContent) > 0) {
-                Number(product.children[1].textContent)++;
-            }
-            else if(Number(cart.lastElementChild.textContent) === 0) {
-                Number(product.children[1].textContent)++;
-                Number(cart.lastElementChild.textContent) === product.children[1];
-            }
-        });
-        product.children[0].addEventListener('click', function() {
-            if(Number(cart.lastElementChild.textContent) > 1) {
-                Number(product.children[1].textContent)--;
-            }
-        });
+
+    let cart_elem = cart__products[cart__products.findIndex(elem => elem.getAttribute('data-id') === product.getAttribute('data-id'))];
     
+    product.querySelector('.product__quantity-controls').lastElementChild.addEventListener('click', function(e) {
+        if (cart_elem) {
+            Number(cart_elem.querySelector('.cart__product-count').textContent)++;
+        }
+        else if (!cart_elem) {
+            cart__products.insertAdjacentHTML('afterbegin', cart__products.firstElementChild.outerHTML);
+            cart_elem = cart__products.firstElementChild;
+            cart_elem.setAttribute('data-id') === product.getAttribute('data-id');
+            cart_elem.querySelector('.cart__product-image').setAttribute('src') === product.querySelector('.product__image').getAttribute('src');
+            Number(cart_elem.querySelector('.cart__product-count').textContent)++;
+        }
+        e.preventDefault();
+    });
+
+    product.querySelector('.product__quantity-controls').firstElementChild.addEventListener('click', function(e) {
+        if (cart_elem) {
+            if (Number(cart_elem.querySelector('.cart__product-count').textContent) == 1) {
+                cart_elem.remove();
+            }
+            else if (Number(cart_elem.querySelector('.cart__product-count').textContent) > 1) {
+                Number(cart_elem.querySelector('.cart__product-count').textContent)--;
+            }
+        }
+        e.preventDefault();
+    });
+
+    product.querySelector('.product__add').addEventListener('click', function(e) {
+        if (cart_elem) {
+            Number(cart_elem.querySelector('.cart__product-count').textContent)++;
+        }
+        else if (!cart_elem) {
+            cart__products.insertAdjacentHTML('afterbegin', cart__products.firstElementChild.outerHTML);
+            cart_elem = cart__products.firstElementChild;
+            cart_elem.setAttribute('data-id') === product.getAttribute('data-id');
+            cart_elem.querySelector('.cart__product-image').setAttribute('src') === product.querySelector('.product__image').getAttribute('src');
+            Number(cart_elem.querySelector('.cart__product-count').textContent)++;
+        }
+        e.preventDefault();
+    });
 }
+
