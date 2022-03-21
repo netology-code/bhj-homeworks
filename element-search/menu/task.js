@@ -4,16 +4,13 @@ let arr_sub = Array.from(menu_sub);
 
 for(let sub of arr_sub) {
     const link = sub.closest('li').querySelector('a');
+    const openedSubMenu = arr_sub.find(elem => elem.classList.contains('menu_active'));
         link.onclick = function() {
-            if(sub.classList.contains('menu_active')) {
-                sub.classList.remove('menu_active');
+            if(openedSubMenu) {
+                openedSubMenu.classList.remove('menu_active');
                 return false;
             }
-            else if(arr_sub.some(elem => elem.classList.contains('menu_active'))) {
-                arr_sub[arr_sub.findIndex(elem => elem.classList.contains('menu_active'))].classList.remove('menu_active');
-                return false;
-            }
-            else {
+            else if(openedSubMenu !== sub) {
                 sub.classList.add('menu_active');
                 return false;
             }
