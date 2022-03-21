@@ -70,20 +70,14 @@ class Autocomplete {
   getMatches( text ) {
     const arr = [];
     const select_arr = Array.from(this.input.options);
-    for(let elem of select_arr) {
-      if(elem === text) {
-        arr.push(elem);
-        return arr[
-        {
-          text: 'Чубакка',
-          value: '1'
-        }
-      ];
+    if (select_arr.includes(text)) {
+      arr.push({
+        text: elem.textContent,
+        value: elem.value
+      });
     }
   }
 }
-    
-    
     /*
       TODO: этот метод нужно дописать
       text - фраза, которую вводят в поле поиска
@@ -97,7 +91,5 @@ class Autocomplete {
         value: 'Содержимое атрибута value'
       }
     */
-  }
-}
 
 new Autocomplete( document.querySelector( '.autocomplete' ));
