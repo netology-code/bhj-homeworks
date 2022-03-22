@@ -1,14 +1,13 @@
-const timer = document.getElementById('timer');
-const url = document.createElement('a');
-const count = Number(timer.textContent);
+let timer = document.getElementById('timer');
+let count = 0;
 
-const output = function() {
-    count--;
+function output() {
+    count = Number(timer.textContent) - 1;
 }
 
 setInterval(output, 1000);
 
-if(count === 0) {
+if(Number(timer.textContent) === 0) {
     clearInterval(output);
     alert('Вы победили в конкурсе!');
 };
