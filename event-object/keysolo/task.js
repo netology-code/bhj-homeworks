@@ -19,7 +19,7 @@ class Game {
   registerEvents() {
     const symbol_1 = Number(this.currentSymbol.textContent);
     const symbol_2 = Number(this.KeyboardEvent.textContent);
-    KeyboardEvent.addEventListener('keyup', () => {
+    KeyboardEvent.addEventListener('keyup', function() {
       if(symbol_1 === symbol_2) {
         this.success();
       }
