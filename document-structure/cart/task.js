@@ -7,9 +7,11 @@ let products_arr = Array.from(products);
 
 for(let product of products_arr) {
 
-    let cart_elem = cart__products[cart__products.findIndex(elem => elem.getAttribute('data-id') === product.getAttribute('data-id'))];
+    const cart = cart__products.querySelectorAll('.cart__product');
+    const cart_elem_arr = Array.from(cart);
+    const cart_elem = cart_elem_arr[cart_elem_arr.findIndex(elem => elem.getAttribute('data-id') === product.getAttribute('data-id'))]
     
-    product.querySelector('.product__quantity-controls').lastElementChild.addEventListener('click', function(e) {
+    product.querySelector('.product__quantity-control_inc').addEventListener('click', function(e) {
         if (cart_elem) {
             Number(cart_elem.querySelector('.cart__product-count').textContent)++;
         }
@@ -23,7 +25,7 @@ for(let product of products_arr) {
         e.preventDefault();
     });
 
-    product.querySelector('.product__quantity-controls').firstElementChild.addEventListener('click', function(e) {
+    product.querySelector('.product__quantity-control_dec').addEventListener('click', function(e) {
         if (cart_elem) {
             if (Number(cart_elem.querySelector('.cart__product-count').textContent) == 1) {
                 cart_elem.remove();
