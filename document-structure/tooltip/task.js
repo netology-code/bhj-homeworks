@@ -1,19 +1,21 @@
 const has_tooltip = document.getElementsByClassName('has-tooltip');
 const arr_tooltip = Array.from(has_tooltip);
 
-for (let tooltip of arr_tooltip) {
-    tooltip.addEventListener('click', function(e) {
-        if (tooltip.nextElementSibling.classList.contains('tooltip')) {
-            tooltip.nextElementSibling.textContent = tooltip.getAttribute('title');
-            tooltip.nextElementSibling.classList.toggle('tooltip_active');
-            console.log(tooltip.nextElementSibling.textContent);
+for (let elem of arr_tooltip) {
+    const tooltip = elem.querySelector('.tooltip');
+    elem.addEventListener('click', function(e) {
+        if (tooltip) {
+            tooltip.textContent = elem.getAttribute('title');
+            tooltip.classList.toggle('tooltip_active');
+            console.log(tooltip.textContent);
             e.preventDefault();
         }
-        else if ((!tooltip.nextElementSibling)||(!tooltip.nextElementSibling.classList.contains('tooltip'))) {
-            tooltip.nextElementSibling.innerHTML = '<div class="tooltip"></div>';
-            tooltip.nextElementSibling.textContent = tooltip.getAttribute('title');
-            tooltip.nextElementSibling.classList.toggle('tooltip_active');
-            console.log(tooltip.nextElementSibling.textContent);
+        else if (!tooltip) {
+            tooltip = elem.nextElementSibling;
+            tooltip.innerHTML = '<div class="tooltip"></div>';
+            tooltip.textContent = elem.getAttribute('title');
+            tooltip.classList.toggle('tooltip_active');
+            console.log(tooltip.textContent);
             e.preventDefault();
         }
     });
