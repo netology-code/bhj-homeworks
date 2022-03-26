@@ -1,12 +1,16 @@
-const reveal = document.querySelector('.reveal');
+const reveals = document.getElementsByClassName('reveal');
 const viewportHeight = window.innerHeight;
+let revealTop = 0;
+let revealBottom = 0;
 
-const revealTop = reveal.getBoundingClientRect().top;
-const revealBottom = reveal.getBoundingClientRect().bottom;
+let reveals_arr = Array.from(reveals);
 
 document.addEventListener('scroll', function() {
-    if((revealTop < viewportHeight)&&(revealBottom > viewportHeight)) {            
-        reveal.classList.add('reveal_active');
+    for(let i = 0; i++; i < reveals_arr.length - 1) {
+        revealTop = reveals_arr[i].getBoundingClientRect().top;
+        revealBottom = reveals_arr[i].getBoundingClientRect().bottom;
+        if ((revealTop < viewportHeight) && (revealBottom > viewportHeight)) {
+            reveals_arr[i].classList.add('reveal_active');
+        }
     }
 });
-
