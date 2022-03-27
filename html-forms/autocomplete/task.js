@@ -67,15 +67,22 @@ class Autocomplete {
     this.list.innerHTML = html.join('');
   }
 
-  getMatches( text ) {
+  getMatches(text) {
     const arr = [];
     const select_arr = Array.from(this.input.options);
-    if (select_arr.includes(text)) {
+    if (select_arr.includes(elem => elem.textContent === text)) {
+      const option = select_arr[select_arr.findIndex(elem => elem.textContent === text)];
       arr.push({
-        text: elem.textContent,
-        value: elem.value
+        text: option.textContent,
+        value: option.value
       });
     }
+    else if (select_arr.includes(elem => elem.selected)) {
+      const option_selected = select_arr[select_arr.findIndex(elem => elem.selected)];
+      text = option_selected.textContent;
+    }
+    return arr;
+
   }
 }
     /*
