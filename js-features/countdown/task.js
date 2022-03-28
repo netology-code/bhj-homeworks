@@ -1,15 +1,13 @@
 let timer = document.getElementById('timer');
-let count = 0;
+const intervalID = setInterval(output, 100);
 
 function output() {
-    count = Number(timer.textContent) - 1;
-    Number(timer.textContent) === count;
+    const currentValue = Number(timer.textContent) - 1;
+    timer.textContent = currentValue;
+
+    if (currentValue === 0) {
+        clearInterval(intervalID);
+        alert('Вы победили в конкурсе!');
+    }
 }
 
-
-if(Number(timer.textContent) === 0) {
-    clearInterval(output);
-    alert('Вы победили в конкурсе!');
-};
-
-setInterval(output, 1000);
