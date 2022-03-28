@@ -1,21 +1,24 @@
-const tasks__list = document.querySelector('.tasks__list');
 const task__input = document.getElementById('task__input');
+const tasks__form = document.getElementById('tasks__form');
+const tasks__list = document.getElementById('tasks__list');
+const task = document.querySelector('.task');
+const task_added = task.cloneNode(true);
 
-const list_arr = Array.from(tasks__list);
-
-if(task__input.textContent) {
-    task__input.addEventListener('submit', function(e) {
-        if(task__input.checkValidity()) {
-            tasks__list.insertAdjacentHTML('afterBegin', tasks__list.firstChild.outerHTML);
-            tasks__list.insertAdjacentText('afterBegin', tasks__list.firstChild.innerText = task__input.textContent);
-            e.preventDefault();
-        }
-    });
-    for(let elem of tasks__list) {
-        elem.queryselector('.task__remove').addEventListener('click', function(e) {
-            elem.remove();
+task__input.addEventListener('input', function(e) {
+    if (task__input.value) {
+        tasks__form.addEventListener('submit', function(e) {
+            task_added.querySelector('.task__title').textContent = task__input.value;
+            tasks__list.appendChild(task_added);
             e.preventDefault();
         });
+        const task_next = task_added.cloneNode(true);
+        task_added.replaceWith(task_next);
     }
-}
+    e.preventDefault();
+});
 
+const task__remove = document.querySelector('.task__remove');
+task__remove.addEventListener('click', function(e) {
+    task__remove.parentElement.remove();
+    e.preventDefault();
+});
