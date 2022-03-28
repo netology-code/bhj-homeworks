@@ -6,7 +6,7 @@ let revealBottom = 0;
 let reveals_arr = Array.from(reveals);
 
 document.addEventListener('scroll', function() {
-    for(let i = 0; i++; i < reveals_arr.length - 1) {
+    for(let i = 0; i < reveals_arr.length - 1; i++) {
         revealTop = reveals_arr[i].getBoundingClientRect().top;
         revealBottom = reveals_arr[i].getBoundingClientRect().bottom;
         if ((revealTop < viewportHeight) && (revealBottom > viewportHeight)) {
