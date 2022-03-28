@@ -1,27 +1,33 @@
 const dead = document.getElementById('dead');
 const lost = document.getElementById('lost');
-const hole = document.getElementsByClassName('hole');
+const holes = document.getElementsByClassName('hole');
 
-const dead_count = 0;
-const lost_count = 0;
+let dead_count = 0;
+let lost_count = 0;
 
-const arr_hole = Array.from(hole);
-for(const elem of arr_hole) {
+for (const elem of Array.from(holes)) {
     elem.onclick = function() {
-        if(elem.classList.contains('hole_has-mole')) {
+        if (elem.classList.contains('hole_has-mole')) {
             dead_count += 1;
-            Number(dead.textContent) === dead_count;
-            if(dead_count === 10) {
+            dead.textContent = dead_count;
+            if (dead_count === 10) {
                 alert('Победа!');
+                reset();
+            }
+        } else {
+            lost_count += 1;
+            lost.textContent = lost_count;
+            if (lost_count === 5) {
+                alert('Поражение!');
+                reset();
             }
         }
-        else if(!elem.classList.contains('hole_has-mole')) {
-                lost_count += 1;
-                Number(lost.textContent) === lost_count;
-                if(lost_count === 5) {
-                alert('Поражение!');
-            }
-            }
+    }
+}
 
-    }
-    }
+function reset() {
+    dead_count = 0;
+    dead.textContent = 0;
+    lost_count = 0;
+    lost.textContent = 0;
+}
