@@ -12,17 +12,6 @@ newCurrency.innerHTML = `<div class="item__code">USD</div>
 let codeArr = Array.from(itemCode);
 let valueArr = Array.from(itemValue);
 
-/*
-const formData = new FormData();
-for (const code of codeArr) {
-    formData.append('code', 'code.textContent');
-}
-for (const value of valueArr) {
-    formData.append('value', 'value.textContent');
-}
-xhr.send(formData);
-*/
-
 xhr.open("GET", "https://netology-slow-rest.herokuapp.com");
 
 xhr.addEventListener("readystatechange", function() {
@@ -32,13 +21,15 @@ xhr.addEventListener("readystatechange", function() {
 
         const responseElemArr = Object.values(responseObject.response.Valute);
         console.log(responseElemArr);
-        const currency = newCurrency.cloneNode(true);
-        items.appendChild(currency);
-        currency.classList.add('item');
-        currency.querySelector('.item__code').textContent = responseElemArr[2].CharCode;
-        currency.querySelector('.item__value').textContent = responseElemArr[2].Value;
-        for (let i = 0; i < responseElemArr.lengh - 1; i++) {
+
+        for (const elem of responseElemArr) {
+            const currency = newCurrency.cloneNode(true);
+            currency.classList.add('item');
+            currency.querySelector('.item__code').textContent = elem.CharCode;
+            currency.querySelector('.item__value').textContent = elem.Value;
+            items.appendChild(currency);
         }
+
         loader.classList.remove('loader_active');
     }
 });
