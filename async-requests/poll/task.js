@@ -24,6 +24,6 @@ xhr.addEventListener("readystatechange", function() {
 
         
     }
-});
+}); 
 
 xhr.send();
