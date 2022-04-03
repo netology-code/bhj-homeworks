@@ -21,7 +21,7 @@ signin__btn.addEventListener('click', function(e) {
 
     const responseObject = JSON.parse(xhr.responseText);
 
-    xhr.addEventListener('readystatechangereadystatechange', function() {
+    xhr.addEventListener('readystatechange', function() {
         if (xhr.readyState === xhr.DONE) {
             if (responseObject.success) {
                 
