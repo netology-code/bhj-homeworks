@@ -15,6 +15,6 @@ const getCookie = (close) => {
     }
 }
 
-if (!getCookie(close)) {
+if (!getCookie('close')) {
     subscribe_modal.classList.add('modal_active');
-}
+} 
