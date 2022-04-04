@@ -4,36 +4,35 @@ const welcome = document.getElementById('welcome');
 const userId = document.getElementById('user_id');
 const signinForm = document.getElementById('signin__form');
 
-signin.classList.add('signin_active');
-
 if (localStorage.getItem('id')) {
     userId.textContent = localStorage.id;
     welcome.classList.add('welcome_active');
+    signin.classList.remove('signin_active');
+} else {
+    signin.classList.add('signin_active');
 }
 
 signin__btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    
     const formData = new FormData(signinForm);
     const xhr = new XMLHttpRequest();
-
     xhr.open('POST', 'https://netology-slow-rest.herokuapp.com/auth.php');
+    xhr.responseType = 'json';
     xhr.send(formData);
     signinForm.reset();
 
-    const responseObject = JSON.parse(xhr.responseText);
-
     xhr.addEventListener('readystatechange', function() {
         if (xhr.readyState === xhr.DONE) {
-            if (responseObject.success) {
-                
-                localStorage.setItem('id', 'responseObject.user_id');
+            if (xhr.response.success) {
+                localStorage.setItem('id', xhr.response.user_id);
                 userId.textContent = localStorage.id;
                 welcome.classList.add('welcome_active');
+                signin.classList.remove('signin_active');
             } 
-            
-            else if (!responseObject.success) {
+            else if (!xhr.response.success) {
                 alert('Неверный логин/пароль');
             }
         }
     });
-    e.preventDefault();
 });
