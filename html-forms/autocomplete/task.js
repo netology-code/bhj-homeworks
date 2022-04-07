@@ -70,21 +70,18 @@ class Autocomplete {
   getMatches(text) {
     const arr = [];
     const select_arr = Array.from(this.input.options);
-    if (select_arr.includes(elem => elem.textContent === text)) {
-      const option = select_arr[select_arr.findIndex(elem => elem.textContent === text)];
-      arr.push({
-        text: option.textContent,
-        value: option.value
-      });
-    }
-    else if (select_arr.includes(elem => elem.selected)) {
-      const option_selected = select_arr[select_arr.findIndex(elem => elem.selected)];
-      text = option_selected.textContent;
-    }
+    select_arr.forEach(item => {
+      if(item.textContent.includes(text)) {
+        arr.push({
+          text: item.textContent,
+          value: item.value
+          });
+      }
+    });
     return arr;
-
   }
 }
+
     /*
       TODO: этот метод нужно дописать
       text - фраза, которую вводят в поле поиска
