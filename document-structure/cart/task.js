@@ -13,14 +13,16 @@ for(let product of Array.from(products)) {
         
         if(product__quantity_value !== 1) {
             product__quantity_value--;
+            product.querySelector('.product__quantity-value').textContent = product__quantity_value;
         }
         e.preventDefault();
     });
     product.querySelector('.product__quantity-control_inc').addEventListener('click', function(e) {
             product__quantity_value++;
+            product.querySelector('.product__quantity-value').textContent = product__quantity_value;
             e.preventDefault();
     });
-    product.querySelector('.product__quantity-value').textContent = product__quantity_value;
+    
 
     const product__add = product.querySelector('.product__add');
     product__add.addEventListener('click', function(e) {
@@ -30,16 +32,18 @@ for(let product of Array.from(products)) {
         cart__product.querySelector('.cart__product-count').textContent = product__quantity_value;
        
         const cart__products_arr = Array.from(cart__products.querySelectorAll('.cart__product'));
-        if(!cart__products_arr.includes(elem => elem.getAttribute('data-id') === product.getAttribute('data-id'))) {
+        if(!cart__products_arr.find(elem => elem.getAttribute('data-id') === product.getAttribute('data-id'))) {
             cart__products.appendChild(cart__product);
         }
         else {
-            const cart__product_added = cart__products_arr[cart__products_arr.findlndex(elem => elem.getAttribute('data-id') === product.getAttribute('data-id'))];
-            let cart__product_count = +(cart__product_added.querySelector('.cart__product-count').textContent);
-            cart__product_count++;
-            cart__product_added.querySelector('.cart__product-count').textContent = cart__product_count;
+            const cart__product_added = cart__products_arr.find(elem => elem.getAttribute('data-id') === product.getAttribute('data-id'));
+            // let cart__product_count = +(cart__product_added.querySelector('.cart__product-count').textContent);
+            // cart__product_count++;
+            // cart__product_added.querySelector('.cart__product-count').textContent = cart__product_count;       
+            
+            
+            cart__product_added.querySelector('.cart__product-count').textContent = product__quantity_value;
         }
-
         
         e.preventDefault();
     })
