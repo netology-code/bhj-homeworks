@@ -1,5 +1,4 @@
 const countDownElem = document.getElementById('timer');
-
 // const updateTimer = setInterval(function () {
 //      if (countDownElem.innerHTML > 0) {
 //          countDownElem.innerHTML--;
