@@ -7,7 +7,7 @@ chat_widget.addEventListener('click', function() {
     chat_widget.classList.add('chat-widget_active');
 });
 
-chat_widget_area.addEventListener('submit', function(e) {
+chat_input.addEventListener('keydown', function(e) {
     e.preventDefault();
     if (chat_input.value.trim()) {
         const message_client = document.createElement('div');
