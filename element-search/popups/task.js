@@ -8,7 +8,7 @@ console.log(buttonDoSuccess)
 
 for (let i = 0; i < ButtonClosedPop.length; i++) {
     ButtonClosedPop[i].onclick = function () {
-        formContentPop[i].style.display = "none";
+        formContentPop[i].classList.remove('modal_active');
     }
 }
 for (let i = 0; i < buttonDoSuccess.length; i++) {
