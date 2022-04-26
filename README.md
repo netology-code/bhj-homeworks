@@ -61,7 +61,7 @@ URL адрес текущей страницы будет являться URL �
 [0]: https://github.com/
 [1]: https://www.sublimetext.com/
 [2]: https://code.visualstudio.com/
-[3]: https://github.com/netology-code/guides/blob/master/git/github.md
+[3]: https://github.com/netology-code/guides/blob/master/github/README.md
 [4]: https://git-scm.com/
 [5]: https://github.com/netology-code/guides/blob/master/git/README.md
 [6]: https://netology.ru/
