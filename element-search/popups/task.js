@@ -3,9 +3,6 @@ const formContentPop = document.getElementsByClassName('modal')
 const buttonDoSuccess = document.getElementsByClassName('show-success')
 const afterPushButtonDoSuccess = document.getElementById('modal_success')
 
-console.log(buttonDoSuccess)
-
-
 for (let i = 0; i < ButtonClosedPop.length; i++) {
     ButtonClosedPop[i].onclick = function () {
         formContentPop[i].classList.remove('modal_active');
