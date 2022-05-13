@@ -17,4 +17,3 @@ function showSlide() {
 sliderArrows.forEach(item => item.addEventListener('click', function (event) {
     showSlide();
 }));
-
