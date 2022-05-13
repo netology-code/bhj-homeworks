@@ -1,16 +1,14 @@
-const ButtonClosedPop = document.getElementsByClassName('modal__close_times');
-const formContentPop = document.getElementsByClassName('modal')
-const buttonDoSuccess = document.getElementsByClassName('show-success')
-const afterPushButtonDoSuccess = document.getElementById('modal_success')
+const buttonClosedPop = Array.from(document.querySelectorAll('.modal__close_times'));
+const beforForm = document.querySelector('#modal_main');
+const button = document.querySelector('.btn');
+const afterForm = document.querySelector('#modal_success');
 
-for (let i = 0; i < ButtonClosedPop.length; i++) {
-    ButtonClosedPop[i].onclick = function () {
-        formContentPop[i].classList.remove('modal_active');
-    }
-}
-for (let i = 0; i < buttonDoSuccess.length; i++) {
-    buttonDoSuccess[i].onclick = function () {
-        buttonDoSuccess[i].classList.remove('modal_active');
-        afterPushButtonDoSuccess.classList.add('modal_active')
-    }
-}
+button.addEventListener('click', function() {
+    afterForm.classList.add('modal_active');
+    beforForm.classList.remove('modal_active');
+});
+
+buttonClosedPop.forEach(item => item.addEventListener('click', function() {
+    beforForm.classList.remove('modal_active');
+    afterForm.classList.remove('modal_active');
+}));
