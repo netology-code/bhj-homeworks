@@ -1,4 +1,5 @@
 let interests = document.querySelectorAll('.interests');
+
 for (let item of interests) {
     const itemInterest = item.closest(".interest");
     if (itemInterest) {
