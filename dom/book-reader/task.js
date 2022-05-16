@@ -2,7 +2,7 @@ let fontSize = Array.from(document.querySelectorAll('.font-size'));
 let book = document.querySelector('#book');
 
 fontSize.forEach(item => item.addEventListener('click', function (evt) {
-        evt.preventDefault(); // dis
+        // evt.preventDefault(); // dis
         let index = fontSize.findIndex(item => item.className.includes('font-size_active'));
         fontSize[index].classList.remove('font-size_active');
         item.classList.add('font-size_active');
