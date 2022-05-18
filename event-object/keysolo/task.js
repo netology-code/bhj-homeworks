@@ -17,13 +17,9 @@ class Game {
     }
 
     registerEvents() {
-        document.addEventListener('keydown', (evt) => {
+        document.addEventListener('keydown', event => {
             let char = this.currentSymbol.textContent;
-            if (evt.key === char) {
-                this.success();
-            } else {
-                this.fail();
-            }
+            (event.key === char) ? this.success() : this.fail();
         });
     }
 

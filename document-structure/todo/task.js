@@ -15,16 +15,9 @@ function add() {
     taskInput.value = '';
 }
 
-taskInput.addEventListener('keyup', (e) => {
-    e.preventDefault();
-    if (e.key === 'Enter' && taskInput.value != '') {
-        add(taskInput.value);
-    }
-})
-
 buttonAddTask.addEventListener('click', (e) => {
     e.preventDefault();
-    if (taskInput.value != '') {
+    if (taskInput.value.trim() !== '') {
         add(taskInput.value);
     }
-})
+});

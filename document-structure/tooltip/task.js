@@ -5,7 +5,7 @@ document.body.appendChild(tooltip);
 
 hasTooltips.forEach(tip => tip.addEventListener('click', function (e) {
     e.preventDefault();
-    tooltip.classList.toggle('tooltip_active');
+    tooltip.classList.add('tooltip_active');
     tooltip.innerText = tip.getAttribute('title');
     let place = tip.getBoundingClientRect();
     tooltip.style.left = place.left + "px";
