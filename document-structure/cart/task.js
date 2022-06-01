@@ -37,6 +37,3 @@ product.forEach(item => {
         quantity.addEventListener('click', quantityControl);
     });
 });
-
-
-
