@@ -1,51 +1,42 @@
-let quantity = Array.from(document.querySelectorAll('.product__quantity-value'));
-let add = Array.from(document.querySelectorAll('.product__add'));
-let cartProducts = document.querySelector('.cart__products');
-let product = Array.from(document.querySelectorAll('.product'));
-let plus = document.querySelectorAll('.product__quantity-control_inc');
-let minus = document.querySelectorAll('.product__quantity-control_dec');
-let controlQuantity = Array.from(document.querySelectorAll('.product__quantity-control'));
+const product = Array.from(document.querySelectorAll('.product'));
+const cartProducts = document.querySelector('.cart__products');
+const productAdd = Array.from(document.querySelectorAll('.product__add'));
+const productImg = Array.from(document.querySelectorAll('.product__image'));
+let index;
 
-controlQuantity.forEach(item => item.addEventListener('click', function() {
-    let index = controlQuantity.findIndex(item => item.parent.dataset.id.includes('div product__quantity-control'));
-    console.log(controlQuantity)
-    if (controlQuantity.classList.contains('product__quantity-control_dec')) {
-        quantity[index].textContent++;
-    }
-    if (controlQuantity.classList.contains('product__quantity-control_inc')) {
-        quantity[index].textContent--;
-        if (quantity[index].textContent < '1') {
-            quantity[index].textContent = '1'
-        }
+productAdd.forEach(item => item.addEventListener('click', (e) => {
+    index = e.currentTarget.closest('.product').dataset.id;
+    const quantityValue = e.currentTarget.closest('.product').querySelector('.product__quantity-value');
+    const cartProduct = Array.from(cartProducts.querySelectorAll('.cart__product'));
+    const cartProductCount = Array.from(cartProducts.querySelectorAll('.cart__product-count'));
+
+    if(!cartProduct[index - 1]) {
+        cartProducts.insertAdjacentHTML('beforeend', `<div class="cart__product" data-id="${index}">
+    <img class="cart__product-image" src="${productImg[index - 1].currentSrc}">
+    <div class="cart__product-count">${quantityValue.textContent}</div>`);
+    } else {
+        cartProductCount[index - 1].textContent = Number(cartProductCount[index - 1].textContent) + Number(quantityValue.textContent);
     }
 }));
 
-for (let index = 0; index < quantity.length; index++) {
-    // plus[index].addEventListener('click', () => {
-    //     quantity[index].textContent++;
-    // })
-    //
-    // minus[index].addEventListener('click', () => {
-    //     quantity[index].textContent--;
-    //
-    //     if (quantity[index].textContent < '1') {
-    //         quantity[index].textContent = '1'
-    //     }
-    // });
+product.forEach(item => {
+    const productQuantityControl = Array.from(item.querySelectorAll('.product__quantity-control'));
+    const productQuantityValue = item.querySelector('.product__quantity-value');
 
-    add[index].addEventListener('click', () => {
-        for (let i = 0; i < cartProducts.children.length; i++) {
-            if (cartProducts.children[i].dataset.id === product[index].dataset.id) {
-                return cartProducts.children[i].querySelector('.cart__product-count').textContent = Number(cartProducts.children[i].querySelector('.cart__product-count').textContent) + Number(quantity[i].textContent);
+    productQuantityControl.forEach(quantity => {
+        const quantityControl = () => {
+            if(quantity.classList.contains('product__quantity-control_inc')) {
+                productQuantityValue.textContent = +productQuantityValue.textContent + 1;
+            } else if(quantity.classList.contains('product__quantity-control_dec')) {
+                productQuantityValue.textContent = +productQuantityValue.textContent - 1;
+            }
+            if(productQuantityValue.textContent <= 1) {
+                productQuantityValue.textContent = 1;
             }
         }
-
-        cartProducts.insertAdjacentHTML('beforeend', `
-            <div class="cart__product" data-id="${product[index].dataset.id}">
-                <img class="cart__product-image" src="${product[index].querySelector('img').getAttribute('src')}">
-                <div class="cart__product-count">${quantity[index].textContent}</div>
-            </div>
-            `);
+        quantity.addEventListener('click', quantityControl);
     });
-}
+});
+
+
 

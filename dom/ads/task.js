@@ -9,6 +9,6 @@ function main() {
         } else {
             i = 0;
         }
-    }, 500);
+    }, 100);
 };
 window.onload = main();
