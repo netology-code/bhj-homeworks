@@ -1,0 +1,23 @@
+body {
+    background-image: url(../img/background.jpg);
+    padding: 50px 100px;
+    color: white;
+    font-size: 2rem;
+}
+
+#gameblock {
+    background-color: rgba(138, 43, 226, 0.5);
+    opacity: 1;
+}
+
+#word {
+    font-size: 5rem;
+}
+
+.symbol_current {
+    color:brown;
+}
+
+.symbol_correct {
+    color: green;
+}
