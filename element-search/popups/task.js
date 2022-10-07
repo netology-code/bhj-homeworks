@@ -1,18 +1,20 @@
-const popup = document.getElementById('modal_main');
-const popupClose = document.getElementsByClassName('modal__close');
-const showSuccess = document.getElementsByClassName('show-success');
-const popupSuccess = document.getElementById('modal_success');
+const popup = document.querySelector('#modal_main');
+const popupClose = document.querySelectorAll('.modal__close_times');
+const popupCloseArray = Array.from(popupClose);
+const popupBtn = document.querySelectorAll('.btn');
+const popupBtnArray = Array.from(popupBtn);
+const popupSuccess = document.querySelector('#modal_success');
 
 popup.classList.add('modal_active');
-popupClose[0].addEventListener('click', () => {
-    popup.classList.remove('modal_active');
-});
+popupCloseArray.forEach(close => close.addEventListener('click', function() {
+    const parentModal = this.closest('.modal');
+    parentModal.classList.remove('modal_active');
+}));
+popupBtnArray.forEach(btn => btn.addEventListener('click', function() {
+     const parentModal = this.closest('.modal');
+     parentModal.classList.remove('modal_active');
+     popupSuccess.classList.add('modal_active');
+}))
 
-showSuccess[0].addEventListener('click', () => {
-    popupSuccess.classList.add('modal_active');
-    popup.classList.remove('modal_active');
-});
 
-popupClose[2].addEventListener('click', () => {
-    popupSuccess.classList.remove('modal_active');
-});
+
