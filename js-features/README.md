@@ -2,9 +2,9 @@
 
 Выполните задачи:
 
-1. [Таймер обратного отсчёта](./countdown/)
-2. [Игра-кликер](./cookie-clicker/)
-3. [Игра «Убей кротов»](./mole-game/)
+1. [Таймер обратного отсчёта.](./countdown/)
+2. [Игра-кликер.](./cookie-clicker/)
+3. [Игра «Убей кротов».](./mole-game/)
 
 Все задачи обязательны к выполнению. Присылать на проверку можно только сразу все три задачи.
 
@@ -21,7 +21,7 @@
 1. [Взаимодействие с пользователем: alert, prompt, confirm.](https://learn.javascript.ru/uibasic)
 2. [Window.confirm().](https://developer.mozilla.org/ru/docs/Web/API/Window/confirm)
 3. [Window.prompt().](https://developer.mozilla.org/ru/docs/Web/API/Window/prompt)
-4. [Window.alert()].(https://developer.mozilla.org/ru/docs/Web/API/Window/alert)
+4. [Window.alert().](https://developer.mozilla.org/ru/docs/Web/API/Window/alert)
 
 ## Бонус
 
@@ -38,7 +38,7 @@
 моделях: DOM и CSSOM.
 
 Для детального понимания рекомендуем пройти два бесплатных курса 
-на Udacity от Google (они на английском):
+на Udacity от Google на английском:
 
 1. [Browser Rendering Optimization.](https://classroom.udacity.com/courses/ud860)
 2. [Website Performance Optimization.](https://classroom.udacity.com/courses/ud884)
@@ -64,7 +64,7 @@
 
 1. [Введение в события DOM.](https://frontender.info/an-introduction-to-dom-events/)
 2. [Введение в браузерные события.](https://learn.javascript.ru/introduction-browser-events)
-3. [addEventListener vs onclick.](https://stackoverflow.com/questions/6348494/addeventlistener-vs-onclick/6348597#6348597)
+3. [AddEventListener vs onclick.](https://stackoverflow.com/questions/6348494/addeventlistener-vs-onclick/6348597#6348597)
 
 ### Вызов события программно 
 
@@ -91,5 +91,5 @@ button.click(); // Вызовет обработчик click
 Чтобы разобраться, какой из них в каком случае применять, прочтите статьи. Они помогут больше понять смысл атрибутов и расскажут
 о событиях загрузки страницы:
 
-1. (\<script> async, defer, async defer, module, nomodule, src, inline)[https://gist.github.com/jakub-g/385ee6b41085303a53ad92c7c8afd7a6]
-2. (Running Your Code at the Right Time.)[https://www.kirupa.com/html5/running_your_code_at_the_right_time.htm]
+1. [\<script> async, defer, async defer, module, nomodule, src, inline.](https://gist.github.com/jakub-g/385ee6b41085303a53ad92c7c8afd7a6)
+2. [Running Your Code at the Right Time.](https://www.kirupa.com/html5/running_your_code_at_the_right_time.htm)
