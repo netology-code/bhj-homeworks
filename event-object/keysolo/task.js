@@ -36,22 +36,6 @@ class Game {
     window.addEventListener('keyup', keyUp);
   }
 
-  countdownTimer() {
-    const symbol = document.querySelectorAll('.symbol');
-    const symbolArray = Array.from(symbol); 
-    let timer = symbolArray.length;
-    const countdown = setInterval(() => {
-      document.querySelector('.timer').textContent = timer;
-      timer--;
-      if (timer < 0 && (symbolArray.some(el => el.classList.contains('symbol_correct')) || symbolArray.every(el => !el.classList.contains('symbol_correct')))) {
-        this.fail();
-        clearInterval(countdown);
-      } if (symbolArray.every(el => el.classList.contains('symbol_correct'))) {
-        clearInterval(countdown);
-      }
-    }, 1000);
-  }
-
   success() {
     this.currentSymbol.classList.add('symbol_correct');
     this.currentSymbol = this.currentSymbol.nextElementSibling;
@@ -64,7 +48,6 @@ class Game {
       this.reset();
     }
     this.setNewWord();
-    this.countdownTimer();
   }
 
   fail() {
@@ -73,13 +56,11 @@ class Game {
       this.reset();
     }
     this.setNewWord();
-    // this.countdownTimer();
   }
 
   setNewWord() {
     const word = this.getWord();
     this.renderWord(word);
-    this.countdownTimer();
   }
 
   getWord() {
