@@ -15,10 +15,10 @@ chatWidget.addEventListener('click', (e) => {
 })
 
 input.addEventListener('keyup', (e) => {
-    function date() {
+    function dateNow() {
         return new Date().toLocaleTimeString().slice(0, -3);
     }
-    const currentDate = date();
+    const currentDate = dateNow();
     if (e.code === 'Enter' && input.value !== '') {
         messages.innerHTML += `
             <div class="message message_client">
@@ -28,10 +28,10 @@ input.addEventListener('keyup', (e) => {
         `;
         input.value = '';
 
-        function bot() {
+        function randomAnswer() {
             return botPhrases[Math.floor(Math.random() * botPhrases.length)];
         }
-        const botAnswer = bot();
+        const botAnswer = randomAnswer();
 
         const delayAnswer = setTimeout(() => {
             messages.innerHTML += `
