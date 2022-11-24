@@ -25,16 +25,38 @@ const interest = () => {
 }
 interest();
 
-checkboxArray.forEach(el => el.addEventListener('change', function(e) {
+const checkboxMain = Array.from(document.querySelectorAll('.check__main'));
+const checkboxChild = Array.from(document.querySelectorAll('.check__child'));
+
+checkboxMain.forEach(el => el.addEventListener('change', function(e) {
     const parent = this.closest('.interest__main');
-    const interestChild = Array.from(parent.querySelectorAll('.interest__child'));
-    if (el.classList.contains('check__main') && el.checked) {
-       interestChild.forEach(i => {
-            if (i.querySelector('.check__child').checked === false) {
-                i.querySelector('.check__child').checked = true;
-            }
-        })
-    }  else {
-        interestChild.forEach(i => i.querySelector('.check__child').checked = false);
-    }   
+    const child = Array.from(parent.querySelectorAll('.check__child'));
+
+    if (el.checked) {
+        child.forEach(i => i.checked = true);
+    } else {
+        child.forEach(i => i.checked = false);
+    }
 }))
+
+checkboxChild.forEach(el => el.addEventListener('change', function(e) {
+    const parent = this.closest('.interest__main');
+    const mainChild = parent.querySelector('.check__main');
+    const child = Array.from(parent.querySelectorAll('.check__child'));
+
+    if (child.some(i => i.checked === el.checked)) {
+        mainChild.indeterminate = true;
+    } if (child.every(i => i.checked === true)) {
+        mainChild.indeterminate = false;
+        mainChild.checked = true;
+    } if (child.every(i => i.checked === false)) {
+        mainChild.indeterminate = false;
+        mainChild.checked = false;
+    }
+}))
+
+
+  
+
+
+
