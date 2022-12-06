@@ -27,7 +27,7 @@ progress.value = 0.7;
 
 ### Процесс реализации
 
-1. Загрузите форму через AJAX по адресу *https://netology-slow-rest.herokuapp.com/upload.php*
+1. Загрузите форму через AJAX по адресу *https://students.netoservices.ru/nestjs-backend/upload*
 2. Отслеживайте событие изменения загрузки и в соответствии 
 с ним корректируйте прогресс
 

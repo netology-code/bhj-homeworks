@@ -41,7 +41,7 @@
 ```
 
 Для загрузки данных о курсе валют, необходимо отправить GET-запрос по адресу:
-*https://netology-slow-rest.herokuapp.com*
+*https://students.netoservices.ru/nestjs-backend/slow-get-courses*
 
 Данные приходят в формате JSON. Пример ответа:
 
@@ -83,7 +83,7 @@
 ### Процесс реализации
 
 1. Загрузите данные о курсе валют, отправив GET-запрос 
-по адресу *https://netology-slow-rest.herokuapp.com*
+по адресу *https://students.netoservices.ru/nestjs-backend/slow-get-courses*
 2. По факту загрузки скройте анимацию загрузки 
 
 ### Повышенный уровень сложности (не обязательно)

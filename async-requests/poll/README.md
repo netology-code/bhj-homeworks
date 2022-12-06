@@ -39,7 +39,7 @@
 ```
 
 Для получения данных опроса, отправьте GET-запрос по адресу:
-*https://netology-slow-rest.herokuapp.com/poll.php*. В результате
+*https://students.netoservices.ru/nestjs-backend/poll*. В результате
 вы получите JSON-данные вида:
 
 ```json
@@ -59,7 +59,7 @@
 ### Процесс реализации
 
 1. Загрузите случайный опрос, отправив GET-запрос по адресу: 
-*https://netology-slow-rest.herokuapp.com/poll.php*
+*https://students.netoservices.ru/nestjs-backend/poll*
 2. Отобразите вопрос и список ответов в виде кнопок
 3. При нажатии на какую-либо кнопку, выведите диалоговое окно
 с надписью «Спасибо, ваш голос засчитан!»
@@ -72,7 +72,7 @@
 
 Для этого, после нажатия на ответ, вам необходимо послать POST-запрос
 с параметром *vote=id_опроса&answer=индекс_ответа_в_массиве_ответов* на адрес:
-*https://netology-slow-rest.herokuapp.com/poll.php* с заголовком
+*https://students.netoservices.ru/nestjs-backend/poll* с заголовком
 *Content-type=application/x-www-form-urlencoded*
 
 В ответ вы получите json-массив вида:
@@ -98,7 +98,7 @@
 
 ```javascript
 const xhr = new XMLHttpRequest;
-xhr.open( 'POST', 'https://netology-slow-rest.herokuapp.com/poll.php' );
+xhr.open( 'POST', 'https://students.netoservices.ru/nestjs-backend/poll' );
 xhr.setRequestHeader( 'Content-type', 'application/x-www-form-urlencoded' );
 xhr.send( 'vote=1&answer=2' );
 ```
