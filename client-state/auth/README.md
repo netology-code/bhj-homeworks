@@ -19,7 +19,7 @@
 ```html
 <div class="signin" id="signin">
     <h2 class="title">Вход</h2>
-    <form action="https://netology-slow-rest.herokuapp.com/auth.php" id="signin__form">
+    <form action="https://students.netoservices.ru/nestjs-backend/auth" id="signin__form">
         <div class="row">
             <input type="text" name="login" class="control" placeholder="Логин">
         </div>
@@ -43,7 +43,7 @@
 
 В момент, когда пользователь нажимает на кнопку *#signin__btn*, необходимо
 направить AJAX-запрос с содержимым формы по адресу 
-*https://netology-slow-rest.herokuapp.com/auth.php*
+*https://students.netoservices.ru/nestjs-backend/auth*
 
 При неверных данных для входа вы получите JSON-ответ
 
@@ -82,7 +82,7 @@
 
 1. Реализуйте механизм авторизации. 
 Для этого передайте данные формы с помощью POST-запроса по адресу
-*https://netology-slow-rest.herokuapp.com/auth.php*
+*https://students.netoservices.ru/nestjs-backend/auth*
     1. После успешного входа, сохраните полученный id-пользователя в локальное хранилище
     2. При успешной авторизации, задайте id пользователя в блок *#welcome* и отобразите его
     3. Если авторизация не удалась, выведите сообщение «Неверный логин/пароль»
