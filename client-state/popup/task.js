@@ -1,32 +1,26 @@
-let modalClose = document.querySelector(".modal__close");
-let subscribeModal = document.getElementById("subscribe-modal");
+const modalClose = Array.from(document.querySelectorAll('.modal__close'));
+const subscribeModel = document.getElementById('subscribe-modal');
 
-const getCookie = (name) => {
-  const value = "; " + document.cookie;
-  let parts = value.split("; " + name + "=");
+if (!getCookie('subscribeModalForm')) {
+    subscribeModel.classList.add('modal_active');
+}
 
-  if (parts.length === 2) {
-    return parts.pop().split(";").shift();
-  }
-};
+function close() {
+    const modal = this.closest('.modal_active');
 
-window.addEventListener("load", function () {
-  if (subscribeModal.classList.add("modal_active")) {
-    return true;
-  }
-});
+    if (modal) {
+        modal.classList.remove('modal_active');
+        document.cookie = 'subscribeModalForm=true';
+    }
+}
 
-modalClose.addEventListener("click", function (event) {
-  event.target.closest(".modal").classList.remove("modal_active");
+function getCookie(name) {
+    const cookies = `; ${document.cookie}`;
+    const cookie = cookies.split(`; ${name}=`);
 
-  if (getCookie("modalOpen")) {
-    return false;
-  } else {
-    let date = new Date();
+    if (cookie.length === 2) {
+        return cookie.pop().split(';').shift();
+    }
+}
 
-    date.setDate(date.getDate() + 1);
-    date = date.toUTCString();
-
-    document.cookie = "modalOpen=true; path=/; expires=" + date;
-  }
-});
+modalClose.forEach(element => element.addEventListener('click', close));
