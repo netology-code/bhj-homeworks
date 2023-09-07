@@ -19,9 +19,7 @@ form.addEventListener("submit", (event) => {
       }
     })
     .then((data) => {
-      inputFields.forEach((field) => {
-        field.value = "";
-      });
+      form.reset();
       localStorage.setItem("id", data.user_id);
       savedId = localStorage.getItem("id");
       userId.textContent = savedId;

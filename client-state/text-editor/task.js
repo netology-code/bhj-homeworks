@@ -12,5 +12,5 @@ window.addEventListener("beforeunload", function () {
 
 resetBtn.addEventListener("click", function () {
   editor.value = "";
-  localStorage.setItem("textEditor", "");
+  localStorage.removeItem();
 });
