@@ -45,7 +45,7 @@
 
 В элементе с классом *dropdown__value* содержится выбранное значение.
 
-Для того, чтобы открыть меню, требуется проставить класс *dropdown__list_active*:
+Для того чтобы открыть меню, требуется проставить класс *dropdown__list_active*:
 
 ```html
 <ul class="dropdown__list dropdown__list_active"></ul>
