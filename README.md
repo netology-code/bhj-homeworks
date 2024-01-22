@@ -65,3 +65,5 @@ URL-адрес страницы будет URL-адресом вашего ре�
 [4]: https://git-scm.com/
 [5]: https://github.com/netology-code/guides/blob/master/git/README.md
 [6]: https://netology.ru/
+
+🤣
