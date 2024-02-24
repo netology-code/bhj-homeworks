@@ -4,7 +4,8 @@ class BookReader {
       this.book = document.getElementById('book');
       
       this.fontSizes.forEach(fontSize => {
-        fontSize.addEventListener('click', () => {
+        fontSize.addEventListener('click', (event) => { // Добавляем параметр event
+          event.preventDefault(); // Предотвращаем стандартное поведение
           this.setFontSize(fontSize.dataset.size);
         });
       });
