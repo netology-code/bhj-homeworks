@@ -4,9 +4,12 @@ class BookReader {
       this.book = document.getElementById('book');
       
       this.fontSizes.forEach(fontSize => {
-        fontSize.addEventListener('click', (event) => { // Добавляем параметр event
-          event.preventDefault(); // Предотвращаем стандартное поведение
-          this.setFontSize(fontSize.dataset.size);
+        fontSize.addEventListener('click', (event) => {
+          event.preventDefault();
+          const size = fontSize.dataset.size;
+          if (size) { //  атрибут data-size
+            this.setFontSize(size);
+          }
         });
       });
     }
@@ -15,10 +18,12 @@ class BookReader {
       this.fontSizes.forEach(fontSize => {
         fontSize.classList.remove('font-size_active');
       });
-      
+  
       const newSizeElement = document.querySelector(`.font-size_${size}`);
-      newSizeElement.classList.add('font-size_active');
-      
+      if (newSizeElement) {
+        newSizeElement.classList.add('font-size_active');
+      }
+  
       this.book.classList.remove('book_fs-small', 'book_fs-big');
       if (size === 'small') {
         this.book.classList.add('book_fs-small');
@@ -29,4 +34,5 @@ class BookReader {
   }
   
   new BookReader();
+  
   
