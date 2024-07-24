@@ -33,7 +33,7 @@ function startTimer(){
                 }
             } else {
                 window.location.href = downloadLink
-                alert('Вы победили в конкурсе!')
+                alert('Вы победили в конкурсе! Подождите, для получения приза!')
                 return;
             } 
         }
