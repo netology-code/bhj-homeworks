@@ -1,15 +1,12 @@
-'use strict'
+const scoreClicks = document.getElementById(`clicker__counter`);
+const cookie = document.getElementById(`cookie`);
+let score = 0;
 
-const cookieImage = document.getElementById("cookie");
-let cookieClick = document.getElementById("clicker__counter");
-let cookieSpeedClick = document.getElementById("clicker__speed__counter");
-let todayTime = Date.now();
-let previousClicks = 0;
+function touchCoocie() {
+  score += 1;
+  scoreClicks.textContent = score;
+  cookie.width = 180;
+  setTimeout(() => {cookie.width = 200;}, 50);
+}
 
-cookieImage.onclick = function () {
-    cookieImage.classList.contains('clicker__cookie') ? cookieImage.className = 'new__clicker__cookie' : cookieImage.className = 'clicker__cookie';
-    let currentClicks = parseInt(cookieClick.textContent);
-    cookieClick.textContent = currentClicks + 1;
-    cookieSpeedClick.textContent = (((Date.now() - todayTime) / 1000) / (currentClicks - previousClicks)).toFixed(2);
-    previousClicks = currentClicks;
-};
+cookie.onclick = touchCoocie;
