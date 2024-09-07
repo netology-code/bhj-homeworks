@@ -6,7 +6,7 @@ function closeMenu (){
 }
 const value = document.querySelector('.dropdown__value')
 value.addEventListener('click',openMenu )
-var machineCode = Array.from(document.querySelectorAll('.dropdown__item'))
+let machineCode = Array.from(document.querySelectorAll('.dropdown__item'))
 machineCode.forEach((item, index) =>{
     item.onclick = () => {
         closeMenu()
