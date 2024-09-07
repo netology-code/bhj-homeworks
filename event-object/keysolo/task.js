@@ -22,7 +22,7 @@ class Game {
 
 		function setEnteredSymbol() {
 			let symbol = current.currentSymbol.textContent.toUpperCase();
-			inputedSymbol = String.fromCharCode(event.keyCode);
+			inputedSymbol = String.fromCharCode(event.keyCode)
 
 			if (symbol == inputedSymbol) {
 				current.success();
