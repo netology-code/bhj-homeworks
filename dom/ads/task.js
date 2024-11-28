@@ -17,4 +17,4 @@ function rotateTexts() {
 }
 
 // Запуск смены объявлений через 1 секунду после загрузки страницы
-setTimeout(rotateTexts, 1000);
+setInterval(rotateTexts, 1000);
