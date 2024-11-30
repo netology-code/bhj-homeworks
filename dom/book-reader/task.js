@@ -21,37 +21,3 @@ for (let i = 0; i < fontSize.length; i++) {
         }
     })
 }
-const colorText = document.body.querySelectorAll(".book__control_color a.color");
-
-for (let i = 0; i < colorText.length; i++) {
-    colorText[i].addEventListener("click", function () {
-        for (const botom of colorText) {
-            if (botom.className.includes('color_active')) {
-                botom.classList.remove('color_active');
-            }
-        }
-        this.classList.add('color_active');
-        if(this.hasAttribute('data-color')){
-            bookContent.style.color = this.dataset.color;
-        } else {
-            bookContent.style.color = '';
-        }  
-    })
-}
-const colorBack = document.body.querySelectorAll(".book__control_background a.color");
-
-for (let i = 0; i < colorBack.length; i++) {
-    colorBack[i].addEventListener("click", function () {
-        for (const botom of colorBack) {
-            if (botom.className.includes('color_active')) {
-                botom.classList.remove('color_active');
-            }
-        }
-        this.classList.add('color_active');
-        if(this.hasAttribute('data-color')){
-            bookContent.style.background = this.dataset.color;
-        } else {
-            bookContent.style.background = '';
-        }
-    })
-}
