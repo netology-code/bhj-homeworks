@@ -4,7 +4,7 @@ const reveals = document.getElementsByClassName("reveal");
 // Функция для обработки события прокрутки
 function handleScroll() {
     // Получаем текущую позицию прокрутки
-    const scrollPosition = window.scrollY;
+    const scrollPosition = window.innerHeight;
 
     // Проходимся по всем элементам
     for (let i = 0; i < reveals.length; i++) {
