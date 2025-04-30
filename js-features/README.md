@@ -27,7 +27,7 @@
 
 ### Книги на курс
 
-1. [DOM Enlightenment.](http://domenlightenment.com)
+1. [HTML и CSS. Разработка и дизайн веб-сайтов.](https://www.google.ru/books/edition/HTML_%D0%B8_CSS_%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0_%D0%B8_%D0%B4%D0%B8/zcZwDwAAQBAJ?hl=nl&gbpv=0)
 2. [Eloquent JavaScript.](https://eloquentjavascript.net)
 3. [DOM Scripting: Web Design with JavaScript and the Document Object Model.](http://xahlee.info/js/scripting_web_index.html)
 4. Николас Закас. JavaScript для профессиональных веб-разработчиков.
@@ -40,8 +40,8 @@
 Для детального понимания рекомендуем пройти два бесплатных курса 
 на Udacity от Google на английском:
 
-1. [Browser Rendering Optimization.](https://classroom.udacity.com/courses/ud860)
-2. [Website Performance Optimization.](https://classroom.udacity.com/courses/ud884)
+1. [Browser Rendering Optimization.](https://www.udacity.com/course/browser-rendering-optimization--ud860)
+2. [Learn Performance.](https://web.dev/learn/performance)
 
 Илья Григорик, соавтор этих курсов, а также автор большого числа материалов
 портала [developers.google.com](https://developers.google.com/web/fundamentals), 
