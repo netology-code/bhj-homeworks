@@ -62,7 +62,7 @@
 Для следующего параграфа вам потребуется больше навыков в задании обработчиков 
 событий. О них мы поговорим на следующих лекциях. Но вы уже можете почитать статьи по теме:
 
-1. [Введение в события DOM.](https://frontender.info/an-introduction-to-dom-events/)
+1. [Введение в события DOM.](https://github.com/FrontenderMagazine/an-introduction-to-dom-events/blob/master/rus.md)
 2. [Введение в браузерные события.](https://learn.javascript.ru/introduction-browser-events)
 3. [AddEventListener vs onclick.](https://stackoverflow.com/questions/6348494/addeventlistener-vs-onclick/6348597#6348597)
 
