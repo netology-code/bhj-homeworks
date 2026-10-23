@@ -2,9 +2,9 @@
 
 Выполните задачи:
 
-1. [Текстовый редактор.](./text-editor)
-2. [Всплывающее один раз окно.](./popup)
-3. [Авторизация.](./auth)
+1. [Автосохранение черновика формы.](./1_form-autosave)
+2. [Кэширование данных с Cache API.](./2_cache-storage)
+3. [Хранение пользовательских настроек в cookies.](./3_cookie-settings)
 
 
 Работы должны соответствовать принятому [стилю оформления кода](https://github.com/netology-code/codestyle).
@@ -28,6 +28,6 @@ cookie-параметрами. Функция *getCookie()* основана н�
 
 А пока можете почитать несколько статей:
 
-1. [RegExp.](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
-2. [Методы RegExp и String.](https://learn.javascript.ru/regexp-methods)
-3. [Регулярные выражения для новичков.](https://tproger.ru/articles/regexp-for-beginners/)
+1. [Cache API — кэшируем данные на стороне клиента](https://habr.com/ru/articles/788786/)
+2. [Web Storage API: примеры использования](https://habr.com/ru/articles/496348/)
+3. [Куки, document.cookie - learn.javascript.ru](https://learn.javascript.ru/cookie)

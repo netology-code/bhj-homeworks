@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кэширование данных — Cache API</title>
+  <link rel="stylesheet" href="task.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Посты</h1>
+    <div class="toolbar">
+      <button id="refresh" type="button">Обновить</button>
+      <span id="status" class="status"></span>
+    </div>
+
+    <div id="error" class="error" hidden></div>
+    <div id="loading" class="loading" hidden>Загрузка…</div>
+    <div id="posts" class="posts"></div>
+  </main>
+
+  <script src="task.js"></script>
+</body>
+</html>

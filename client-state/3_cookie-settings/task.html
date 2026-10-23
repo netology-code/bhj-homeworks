@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Настройки — Cookies</title>
+  <link rel="stylesheet" href="task.css">
+</head>
+<body class="theme-light">
+
+  <div id="cookieBanner" class="banner" hidden>
+  <p>
+    Мы используем cookies для сохранения настроек интерфейса.
+    <button id="acceptCookies" type="button">Принять</button>
+  </p>
+  </div>
+
+  <main class="card">
+    <h1>Настройки</h1>
+
+    <label>Тема
+      <select id="theme">
+        <option value="light">Светлая</option>
+        <option value="dark">Тёмная</option>
+      </select>
+    </label>
+
+    <label>Язык
+      <select id="lang">
+        <option value="ru">Русский</option>
+        <option value="en">English</option>
+      </select>
+    </label>
+
+    <section class="toolbar">
+      <button id="showCookies" type="button">Показать cookies</button>
+      <button id="clearCookies" type="button">Удалить все cookies</button>
+    </section>
+
+    <pre id="cookiesOut" hidden></pre>
+  </main>
+  <script src="task.js"></script>
+</body>
+</html>

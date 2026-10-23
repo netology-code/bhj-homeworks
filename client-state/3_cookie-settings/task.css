@@ -1,0 +1,142 @@
+:root {
+  --accent: #3b6ef5;
+  --danger: #d64545;
+  --banner-bg: #1f2430;
+  --banner-text: #fff;
+}
+
+body.theme-light {
+  --bg: #f5f6f8;
+  --card: #fff;
+  --text: #1f2430;
+  --muted: #6b7280;
+  --border: #d7dbe2;
+}
+
+body.theme-dark {
+  --bg: #0f141b;
+  --card: #1a212c;
+  --text: #e6eaf1;
+  --muted: #9aa4b2;
+  --border: #2a3441;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 32px 16px 96px;
+  transition: background .2s, color .2s;
+}
+
+.card {
+  max-width: 560px;
+  margin: 0 auto;
+  background: var(--card);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, .06);
+  transition: background .2s;
+}
+
+h1 { margin: 0 0 16px; font-size: 1.4rem; }
+
+.field { display: block; margin-bottom: 16px; }
+
+.field > span {
+  display: block;
+  font-size: .85rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+select {
+  width: 100%;
+  padding: 9px 12px;
+  font: inherit;
+  color: inherit;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  outline: none;
+}
+
+select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 110, 245, .15);
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+button {
+  padding: 9px 16px;
+  font: inherit;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover { filter: brightness(.96); }
+
+.btn-danger {
+  background: transparent;
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+pre {
+  margin: 16px 0 0;
+  padding: 12px;
+  background: #0f172a;
+  color: #d6e2ff;
+  border-radius: 8px;
+  font-size: .8rem;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.banner {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  width: min(560px, calc(100% - 32px));
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--banner-bg);
+  color: var(--banner-text);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, .25);
+  font-size: .9rem;
+  line-height: 1.4;
+}
+
+.banner__text { margin: 0; flex: 1; }
+
+.banner button {
+  flex-shrink: 0;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: #3b6ef5;
+  color: #fff;
+  cursor: pointer;
+}
+
+[hidden] { display: none !important; }

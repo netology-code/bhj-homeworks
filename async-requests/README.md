@@ -2,9 +2,10 @@
 
 Выполните задачи:
 
-1. [Анимация загрузки данных.](./preloader) 
-2. [Опрос с выбором результатов.](./poll)
-3. [Загрузка больших файлов.](./progressbar)
+1. [Поиск станций метро.](./1_metro-station) 
+2. [Лист и карточка (Факультеты Хогвартса).](./2_1_wizard-word)
+2. [Лист и карточка альтернативное задание (Рецепты).](./2_2_recipes)
+3. [Автодополнение адреса.](./3_address-autocomplete)
 
 Чтобы получить зачёт, выполните все три задачи. Пришлите на проверку все три задачи сразу, не частями.
 
@@ -61,20 +62,12 @@
 
 ### Promise
 
-Чтобы познакомиться с более современным интерфейсом асинхронных 
-запросов, изучите тему *обещаний*.
-
-Вот несколько материалов по ней, а подробнее мы рассмотрим тему в следующем курсе.
-
 1. [Promise MDN.](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 2. [Promise.](https://learn.javascript.ru/promise)
 3. [Использование промисов.](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Ispolzovanie_promisov)
 4. [Промисы простыми словами.](https://medium.com/web-standards/promises-explained-caee4c9b86d0)
 
 ### Fetch
-
-Давайте посмотрим на альтернативный вариант формирования запросов — функцию *fetch()*,
-которая является частью *BOM*, как и *XMLHttpRequest*:
 
 1. [Использование fetch.](https://developer.mozilla.org/ru/docs/Web/API/Fetch_API/Using_Fetch)
 2. [Fetch API.](https://developer.mozilla.org/ru/docs/Web/API/Fetch_API)

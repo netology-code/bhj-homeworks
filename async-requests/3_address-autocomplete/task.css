@@ -1,0 +1,136 @@
+:root {
+  --border: #d0d5dd;
+  --border-focus: #4a7dff;
+  --bg-hover: #f2f5ff;
+  --bg-active: #e6ecff;
+  --text: #1a1d23;
+  --text-muted: #6b7280;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f7f8fa;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  padding: 80px 16px;
+  margin: 0;
+}
+
+.field {
+  width: 100%;
+  max-width: 520px;
+}
+
+.field__label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.autocomplete {
+  position: relative;
+}
+
+.autocomplete__input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+
+.autocomplete__input:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(74, 125, 255, .15);
+}
+
+.autocomplete__input::placeholder { color: #9aa1ac; }
+
+.autocomplete__spinner {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  border: 2px solid #dfe3ea;
+  border-top-color: var(--border-focus);
+  border-radius: 50%;
+  animation: spin .6s linear infinite;
+  display: none;
+}
+.autocomplete__spinner.is-visible { display: block; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.autocomplete__list {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 20;
+  max-height: 320px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 32px rgba(16, 24, 40, .12);
+}
+
+.autocomplete__list[hidden] { display: none; }
+
+.autocomplete__item {
+  padding: 10px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.autocomplete__item:hover,
+.autocomplete__item.is-active {
+  background: var(--bg-hover);
+}
+
+.autocomplete__item[aria-selected="true"] {
+  background: var(--bg-active);
+}
+
+.autocomplete__item mark {
+  background: transparent;
+  color: var(--border-focus);
+  font-weight: 600;
+}
+
+.autocomplete__meta {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.result {
+  margin-top: 20px;
+  padding: 14px 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.result:empty { display: none; }
