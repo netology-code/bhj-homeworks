@@ -1,0 +1,65 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 500px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-size: .9rem;
+  color: #555;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button {
+  margin-top: 12px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font: inherit;
+}
+
+button[type=submit] {
+  background: #3b6ef5;
+  color: #fff;
+  border-color: #3b6ef5;
+}
+
+#status {
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #eef3ff;
+  color: #2b4fbb;
+  display: none;
+}
+
+#out {
+  margin-top: 16px;
+  padding: 12px;
+  background: #0f172a;
+  color: #d6e2ff;
+  border-radius: 6px;
+  font-size: .8rem;
+  display: none;
+  white-space: pre-wrap;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Поиск станций метро — DaData</title>
+  <link rel="stylesheet" href="task.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>Поиск станций метро</h1>
+    <p class="subtitle">Начните вводить название станции или город</p>
+
+    <div class="search-wrapper">
+      <input
+        id="metro-input"
+        type="text"
+        placeholder="Например: Алексеевская, Павелецкая, СПб..."
+        autocomplete="off"
+      />
+      <div class="spinner" id="spinner"></div>
+    </div>
+
+    <ul class="suggestions" id="suggestions" role="listbox"></ul>
+    <div class="error" id="error"></div>
+
+    <div class="details" id="details">
+      <h2 id="details-title"></h2>
+      <div class="details-row">
+        <span class="label">Город</span>
+        <span class="value" id="detail-city"></span>
+      </div>
+      <div class="details-row">
+        <span class="label">Линия</span>
+        <span class="value" id="detail-line"></span>
+      </div>
+      <div class="details-row">
+        <span class="label">Координаты</span>
+        <span class="value" id="detail-coords"></span>
+      </div>
+      <div class="details-row">
+        <span class="label">Статус</span>
+        <span class="value" id="detail-status"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="task.js"></script>
+</body>
+</html>

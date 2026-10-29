@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Автодополнение адреса</title>
+    <link rel="stylesheet" href="task.css" />
+
+</head>
+<body>
+
+  <div class="field">
+    <label class="field__label" for="address">Адрес</label>
+
+    <div class="autocomplete">
+      <input
+        id="address"
+        class="autocomplete__input"
+        type="text"
+        placeholder="Начните вводить адрес..."
+        autocomplete="off"
+      />
+      <div class="autocomplete__spinner" aria-hidden="true"></div>
+
+      <ul
+        id="suggestions"
+        class="autocomplete__list"
+        hidden
+      ></ul>
+    </div>
+
+    <div id="result" class="result"></div>
+  </div>
+    <script src="task.js" defer></script>
+</body>
+</html>

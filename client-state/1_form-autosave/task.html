@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Автосохранение формы</title>
+  <link rel="stylesheet" href="task.css">
+</head>
+<body>
+  <main class="card">
+  <div id="status"></div>
+
+  <form id="form">
+    <label>Имя      <input name="name" required></label>
+    <label>Email    <input name="email" type="email" required></label>
+    <label>Сообщение<textarea name="message" required></textarea></label>
+    <button type="submit">Отправить</button>
+    <button type="button" id="clear">Удалить черновик</button>
+  </form>
+
+  <pre id="out"></pre>
+  </main>
+  <script src="task.js"></script>
+</body>
+</html>
