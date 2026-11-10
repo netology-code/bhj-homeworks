@@ -1,0 +1,13 @@
+{
+  "name": "preloader-server",
+  "version": "1.0.0",
+  "description": "Домашнее задание к занятию 3.1 «Асинхронные запросы».",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
