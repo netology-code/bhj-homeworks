@@ -39,7 +39,7 @@
 ```
 
 Для получения данных опроса, отправьте GET-запрос по адресу:
-*https://students.netoservices.ru/nestjs-backend/poll*. В результате
+*http://localhost:3333/poll*. В результате
 вы получите JSON-данные вида:
 
 ```json
@@ -58,10 +58,11 @@
 
 ### Процесс реализации
 
-1. Загрузите случайный опрос, отправив GET-запрос по адресу: 
-*https://students.netoservices.ru/nestjs-backend/poll*
-2. Отобразите вопрос и список ответов в виде кнопок
-3. При нажатии на какую-либо кнопку, выведите диалоговое окно
+1. Запустите сервер `npm start` (см. решение задач)
+2. Загрузите случайный опрос, отправив GET-запрос по адресу: 
+*http://localhost:3333/poll*
+3. Отобразите вопрос и список ответов в виде кнопок
+4. При нажатии на какую-либо кнопку, выведите диалоговое окно
 с надписью «Спасибо, ваш голос засчитан!»
 
 ### Повышенный уровень сложности (не обязательно)
@@ -72,7 +73,7 @@
 
 Для этого, после нажатия на ответ, вам необходимо послать POST-запрос
 с параметром *vote=id_опроса&answer=индекс_ответа_в_массиве_ответов* на адрес:
-*https://students.netoservices.ru/nestjs-backend/poll* с заголовком
+*http://localhost:3333/poll* с заголовком
 *Content-type=application/x-www-form-urlencoded*
 
 В ответ вы получите json-массив вида:
@@ -98,7 +99,7 @@
 
 ```javascript
 const xhr = new XMLHttpRequest;
-xhr.open( 'POST', 'https://students.netoservices.ru/nestjs-backend/poll' );
+xhr.open( 'POST', 'http://localhost:3333/poll' );
 xhr.setRequestHeader( 'Content-type', 'application/x-www-form-urlencoded' );
 xhr.send( 'vote=1&answer=2' );
 ```
@@ -126,12 +127,13 @@ xhr.send( 'vote=1&answer=2' );
 ## Решение задач
 
 1. Перейти в папку задания. `cd ./async-requests/poll`.
-2. Открыть файл `task.js` в вашем редакторе кода и выполнить задание.
-3. Открыть файл `task.html` в вашем браузере и убедиться в правильности выводимых результатов.
-4. Добавить файл `task.js` в индекс git с помощью команды `git add %file-path%`, где %file-path% - путь до целевого файла. `git add task.js`.
-5. Сделать коммит используя команду `git commit -m '%comment%'`, где %comment% - это произвольный комментарий к вашему коммиту. `git commit -m 'first commit poll'`.
-6. Опубликовать код в репозиторий homeworks с помощью команды `git push -u origin master`.
-7. Прислать ссылку на репозиторий через личный кабинет на сайте [Нетологии][6].
+2. Запустите сервер `npm start`
+3. Открыть файл `task.js` в вашем редакторе кода и выполнить задание.
+4. Открыть файл `task.html` в вашем браузере и убедиться в правильности выводимых результатов.
+5. Добавить файл `task.js` в индекс git с помощью команды `git add %file-path%`, где %file-path% - путь до целевого файла. `git add task.js`.
+6. Сделать коммит используя команду `git commit -m '%comment%'`, где %comment% - это произвольный комментарий к вашему коммиту. `git commit -m 'first commit poll'`.
+7. Опубликовать код в репозиторий homeworks с помощью команды `git push -u origin master`.
+8. Прислать ссылку на репозиторий через личный кабинет на сайте [Нетологии][6].
 
 [0]: https://github.com/
 [1]: https://www.sublimetext.com/
