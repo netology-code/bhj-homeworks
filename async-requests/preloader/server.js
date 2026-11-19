@@ -8,8 +8,10 @@
  * Порт:                PORT=3333 (по умолчанию)
  * Задержка ответа:     DELAY_MS=3000 (по умолчанию, миллисекунды)
  *
- * Дополнительно раздаёт статические файлы репозитория homeworks,
- * поэтому страница задания доступна по адресу:
+ * Дополнительно раздаёт статические файлы репозитория homeworks.
+ * Страница задания доступна по любому из адресов:
+ *   http://localhost:3333/            (документ по умолчанию — task.html)
+ *   http://localhost:3333/index.html
  *   http://localhost:3333/async-requests/preloader/task.html
  */
 
@@ -223,25 +225,74 @@ async function handleCourses(req, res) {
   });
 }
 
-async function handleStatic(req, res, pathname) {
-  if (pathname === '/') {
-    res.writeHead(302, { Location: `${SITE_ROOT}/task.html` });
-    res.end();
-    return;
+/** Документы по умолчанию для каталогов: сначала index.html, затем task.html. */
+const DEFAULT_DOCS = ['index.html', 'task.html'];
+
+/** Пути-кандидаты для запроса в порядке приоритета; null при некорректном URL. */
+function buildCandidates(pathname) {
+  // Корень сайта — папка текущего задания: страница доступна по адресам
+  // /, /index.html и по пути к каталогу задания без указания документа.
+  if (pathname === '/' || pathname === '/index.html') {
+    return [path.join(STATIC_ROOT, SITE_ROOT)];
   }
 
-  let filePath;
+  let relative;
   try {
-    filePath = path.normalize(path.join(STATIC_ROOT, decodeURIComponent(pathname)));
+    relative = decodeURIComponent(pathname);
   } catch (error) {
+    return null;
+  }
+
+  return [
+    // Сначала путь в корне репозитория,
+    path.normalize(path.join(STATIC_ROOT, relative)),
+    // затем тот же путь в папке задания: благодаря этому относительные
+    // ссылки страницы (task.css, task.js, main.js) работают и при её
+    // открытии по адресу / или /index.html
+    path.normalize(path.join(STATIC_ROOT, SITE_ROOT, relative)),
+  ];
+}
+
+/** По кандидатам находит файл; для каталога — документ по умолчанию. */
+async function resolveFile(candidates) {
+  for (const candidate of candidates) {
+    const stat = await fs.stat(candidate).catch(() => null);
+    if (!stat) {
+      continue;
+    }
+    if (stat.isFile()) {
+      return candidate;
+    }
+    if (stat.isDirectory()) {
+      for (const doc of DEFAULT_DOCS) {
+        const docPath = path.join(candidate, doc);
+        if ((await fs.stat(docPath).catch(() => null))?.isFile()) {
+          return docPath;
+        }
+      }
+    }
+  }
+  return null;
+}
+
+async function handleStatic(req, res, pathname) {
+  const candidates = buildCandidates(pathname);
+  if (candidates === null) {
     res.writeHead(400);
     res.end('Bad Request');
     return;
   }
 
-  if (filePath !== STATIC_ROOT && !filePath.startsWith(STATIC_ROOT + path.sep)) {
+  if (candidates.some((filePath) => !filePath.startsWith(STATIC_ROOT + path.sep))) {
     res.writeHead(403);
     res.end('Forbidden');
+    return;
+  }
+
+  const filePath = await resolveFile(candidates);
+  if (filePath === null) {
+    res.writeHead(404);
+    res.end('Not Found');
     return;
   }
 
@@ -290,7 +341,7 @@ const server = http.createServer(async (req, res) => {
 
 server.listen(PORT, () => {
   console.log(`Сервер запущен: http://localhost:${PORT}/slow-get-courses`);
-  console.log(`Страница задания:                   http://localhost:${PORT}${SITE_ROOT}/task.html`);
+  console.log(`Страница задания: http://localhost:${PORT}/ (также /index.html и ${SITE_ROOT}/task.html)`);
   console.log(`Статика из: ${STATIC_ROOT}`);
   console.log(`Задержка ответа: ${DELAY_MS} мс (изменить: DELAY_MS=...)`);
 });
